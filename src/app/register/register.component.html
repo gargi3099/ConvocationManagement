@@ -1,4 +1,5 @@
-<body id="top">
+<body >
+  <br><br>
     <div class="bgded overlay" style="background-image:url('assets/images/background.jpg');"> 
       <div class="main-block" style="margin-left: 475px;" *ngIf="!this.memberService.available"> 
         <div id="breadcrumb" class="title_register"> 
@@ -55,13 +56,14 @@
               <input class="form-control" name="guestno" #guestno="ngModel" type="number" required min=0 max=2 ngModel><br>
               <!-- <label class="required">Names of Guests</label> -->
               <input class="form-control" name="guestnames" #guestnames="ngModel" type="string" required placeholder="Names of guests*" ngModel><br>
-              <button [disabled]="!memberObject.valid" class="btn btn-dark btn-block" type="submit">Submit</button>
+              <button [disabled]="!memberObject.valid" class="btn btn-dark btn-block"  type="submit">Submit</button>
             </form>
           <!-- / main body -->
           <div class="clear"></div>
         </main>
     </div>
     </div>
+    <br><br>
     <!-- JAVASCRIPTS -->
     <script src="../layout/scripts/jquery.min.js"></script>
     <script src="../layout/scripts/jquery.backtotop.js"></script>

@@ -1,6 +1,11 @@
+body{
+    min-height: 1550px;
+    overflow-y: hidden;
+    background-color:floralwhite;
+}
 .page{
     width: 100%;
-    height: auto;
+    // height: auto;
     background-color:floralwhite;
     //border-style: groove;
     padding-bottom: 10px;
@@ -16,7 +21,8 @@
 .navbar {
     overflow: hidden;
     //background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-    background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
+    // background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
+    background-image: url('/assets/images/abstract.jpg');
     font-family: Arial;
   }
   
@@ -192,7 +198,8 @@ text-align: center;}
 .invite{
     background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
     width: 1310px;
-    height: 300px;
+    height: 350px;
+    margin: auto;
     margin-top: 50px;
     border-style: groove;
     color: white;
@@ -207,7 +214,7 @@ text-align: center;}
     border-style: groove;
     margin: 50px;
     margin-top: 20px;
-    height: 170px;
+    height: 240px;
     color: black;
 }
 

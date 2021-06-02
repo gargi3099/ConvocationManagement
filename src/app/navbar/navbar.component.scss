@@ -28,7 +28,8 @@ font-family: 'Times New Roman', Times, serif;
 .navbar {
   overflow: hidden;
   //background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-  background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
+  background-image: url('/assets/images/abstract.jpg');
+  // background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
   font-family: Arial;
 }
 
@@ -104,6 +105,21 @@ font-family: 'Times New Roman', Times, serif;
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.page{
+  width: 100%;
+  height: auto;
+  background-color:floralwhite;
+  //border-style: groove;
+  padding-bottom: 10px;
+}
+.headerpart{
+  width: 100%;
+  height: 140px;
+  //border-style: groove;
+  background-color: black;
+  background-image: url('/assets/images/logo-mpuat1.png');
+  background-repeat: no-repeat;
 }
 
 
