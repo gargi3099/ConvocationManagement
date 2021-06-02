@@ -5,6 +5,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { TicketComponent } from './ticket/ticket.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'register',component: RegisterComponent},
   {path:'awards',component: AwardsComponent},
   {path:'contact',component: ContactusComponent},
+  {path:'ticket',component: TicketComponent},
   // {path:'signup',component: SignupComponent},
   // {path:'summary',component: SummaryComponent},
   // {path:'**',component: SigninComponent}
