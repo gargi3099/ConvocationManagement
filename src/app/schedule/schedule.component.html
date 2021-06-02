@@ -1,1 +1,99 @@
-<p>schedule works!</p>
+<head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+  
+    <h1><i class="bi bi-clock-fill"></i>   Schedule for the Convocation Day</h1>
+    <br>
+    <table>
+      <tr>
+        <th >Time</th>
+        <td colspan="4"  class="stage-saturn" >Event<span></span></td>
+      </tr>
+    <tr>
+      <th >{{expense.result[0].Time}}</th>
+      <td colspan="4"  class="stage-earth">{{expense.result[0].Event}}<span>{{expense.result[0].Speaker}}</span></td>
+    </tr>
+    <tr>
+      <th>{{expense.result[1].Time}}</th>
+      <td colspan="4" class="stage-mercury">{{expense.result[1].Event}}<span>{{expense.result[1].Speaker}}</span></td>
+    </tr>
+    <tr>
+      <th>{{expense.result[2].Time}}</th>
+      <td colspan="4" class="stage-earth">{{expense.result[2].Event}}<span>{{expense.result[2].Speaker}}</span></td>
+    </tr>
+    <tr>
+      <th>{{expense.result[3].Time}}</th>
+      <td colspan="4" class="stage-earth">{{expense.result[3].Event}}<span>{{expense.result[3].Speaker}}</span></td>
+    </tr>
+    <tr>
+      <th>{{expense.result[4].Time}}</th>
+      <td colspan="4" class="stage-mercury">{{expense.result[4].Event}}<span>{{expense.result[4].Speaker}}</span></td>
+    </tr>
+    <tr>
+      <th>{{expense.result[5].Time}}</th>
+      <td colspan="4" class="stage-mercury">{{expense.result[5].Event}}<span>{{expense.result[5].Speaker}}</span></td>
+    </tr>
+    <tr>
+      <th>{{expense.result[6].Time}}</th>
+      <td colspan="4" class="stage-saturn">{{expense.result[6].Event}}<span>{{expense.result[6].Speaker}}</span></td>
+    </tr>
+    <tr>
+      <th>{{expense.result[7].Time}}</th>
+      <td colspan="4" class="stage-saturn">{{expense.result[7].Event}}<span>{{expense.result[7].Speaker}}</span></td>
+    </tr>
+    <tr>
+      <th>{{expense.result[8].Time}}</th>
+      <td colspan="4" class="stage-earth">{{expense.result[8].Event}}<span>{{expense.result[8].Speaker}}</span></td>
+    </tr>
+    <tr>
+      <th>{{expense.result[9].Time}}</th>
+      <td rowspan="1" colspan="1" class="stage-mercury">{{expense.result[9].Event}}<span>{{expense.result[9].Speaker}}</span></td>
+      <td rowspan="1"  colspan="2" class="stage-saturn">{{expense.result[9].Event2}}<span>{{expense.result[9].Speaker}}</span></td>
+      <td  rowspan="1" colspan="1" class="stage-mercury">{{expense.result[9].Event3}}<span>{{expense.result[9].Speaker}}</span></td>
+      <!-- <td rowspan="2" class="stage-saturn">Lunch</td> -->
+    <!-- </tr>
+     <tr>
+      <th></th>
+    </tr> 
+     <tr>
+      <th></th>
+      
+    </tr> -->
+   
+    <tr>
+      <tr>
+        <th>{{expense.result[10].Time}}</th>
+        <td  colspan="1" class="stage-saturn">{{expense.result[10].Event}}<span>{{expense.result[10].Speaker}}</span></td>
+        <td  colspan="2" class="stage-mercury">{{expense.result[10].Event2}}<span>{{expense.result[10].Speaker}}</span></td>
+        <td  colspan="1" class="stage-saturn">{{expense.result[10].Event3}}<span>{{expense.result[10].Speaker}}</span></td>
+        </tr>
+        <tr>
+          <th>{{expense.result[11].Time}}</th>
+          <td colspan="4" class="stage-earth">{{expense.result[11].Event}}<span>{{expense.result[11].Speaker}}</span></td>
+        </tr>
+        <tr>
+          <th>{{expense.result[12].Time}}</th>
+          <td colspan="4" class="stage-mercury">{{expense.result[12].Event}}<span>{{expense.result[12].Speaker}}</span></td>
+        </tr>
+        <tr>
+          <th>{{expense.result[13].Time}}</th>
+          <td colspan="4" class="stage-mercury">{{expense.result[13].Event}}<span>{{expense.result[13].Speaker}}</span></td>
+        </tr>
+        <tr>
+          <th>{{expense.result[14].Time}}</th>
+          <td colspan="4" class="stage-saturn">{{expense.result[14].Event}}<span>{{expense.result[14].Speaker}}</span></td>
+        </tr>
+        <tr>
+          <th>{{expense.result[15].Time}}</th>
+          <td colspan="4" class="stage-saturn">{{expense.result[15].Event}}<span>{{expense.result[15].Speaker}}</span></td>
+        </tr>
+        <tr>
+          <th>{{expense.result[16].Time}}</th>
+          <td colspan="4" class="stage-earth">{{expense.result[16].Event}}<span>{{expense.result[16].Speaker}}</span></td>
+        </tr>
+</table>
+  </body>
+
+

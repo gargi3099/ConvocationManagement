@@ -1,43 +1,66 @@
 <body id="top">
     <div class="bgded overlay" style="background-image:url('assets/images/background.jpg');"> 
-      <div id="breadcrumb" class="hoc clear"> 
-       <h6 class="heading">Register</h6>
+      <div class="main-block" style="margin-left: 475px;" *ngIf="!this.memberService.available"> 
+        <div id="breadcrumb" class="title_register"> 
+          <i class="fas fa-search" style="font-size: 53px;">Check Eligibility</i> 
+        </div>
+          <main class="info">           
+              <form (ngSubmit)="submitSearch(searchObject)" #searchObject="ngForm">
+                <input class="form-control" name="nameS" #nameS="ngModel" type="string" required placeholder="Name*" ngModel><br>
+                <label class="required">Branch</label>
+                <select class="form-control" name="branchS" #branchS="ngModel" ngModel>
+                  <option value="ComputerScienceEngineering">Computer Science Engineering</option>
+                  <option value="ElectronicsCommunication Engineering">Electronics & Communication Engineering</option>
+                  <option value="ElectricalEngineering">Electrical Engineering</option>
+                  <option value="AgriculturalEngineering">Agricultural Engineering</option>
+                  <option value="MechanicalEngineering">Mechanical Engineering</option>
+                  <option value="MiningEngineering">Mining Engineering</option>
+                  <option value="CivilEngineering">Civil Engineering</option>
+                </select>
+                <button [disabled]="!searchObject.valid" class="btn btn-dark btn-block" type="submit">Submit</button>
+              </form>
+            <!-- / main body -->
+            <div class="clear"></div>
+          </main>
       </div>
-      <div class="wrapper row3">
-        <main class="hoc container clear"> 
-          <div class="content">           
+      <div class="main-block" style="margin-left: 475px;" *ngIf="this.memberService.available"> 
+      <div id="breadcrumb" class="title_register"> 
+        <i class="fas fa-pencil-alt" style="font-size: 113px;">Register</i> 
+      </div>
+        <main class="info">           
             <form (ngSubmit)="submitCall(memberObject)" #memberObject="ngForm">
-              <label>Name</label>
-              <input class="form-control" name="name" #name="ngModel" type="string" required placeholder="Enter name" ngModel><br>
-              <p style="color: red;" *ngIf="!name.valid">*Input required</p>
-              <label>Mother's Name</label>
-              <input class="form-control" name="mname" #mname="ngModel" type="string" required placeholder="Enter mother's name" ngModel><br>
-              <p style="color: red;" *ngIf="!mname.valid">*Input required</p>
-              <label>Father's Name</label>
-              <input class="form-control" name="fname" #fname="ngModel" type="string" required placeholder="Enter father's name" ngModel><br>
-              <p style="color: red;" *ngIf="!fname.valid">*Input required</p>
-              <label>Branch</label>
-              <input class="form-control" name="branch" #branch="ngModel" type="string" required placeholder="Enter branch" ngModel><br>
-              <p style="color: red;" *ngIf="!branch.valid">*Input required</p>
-              <label>Phone number</label>
-              <input class="form-control" name="phone" #phone="ngModel" type="number" required placeholder="Enter phone number" ngModel><br>
-              <p style="color: red;" *ngIf="!phone.valid">*Input required</p>
-              <label>Address</label>
-              <input class="form-control" name="address" #address="ngModel" type="string" required placeholder="Enter address" ngModel><br>
-              <p style="color: red;" *ngIf="!address.valid">*Input required</p>
-              <label>No. of Guests</label>
-              <input class="form-control" name="guestno" #guestno="ngModel" type="number" required placeholder="Enter number of guests" ngModel><br>
-              <p style="color: red;" *ngIf="!guestno.valid">*Input required</p>
-              <label>Names of Guests</label>
-              <input class="form-control" name="guestnames" #guestnames="ngModel" type="string" required placeholder="Enter names of guests(, separated)" ngModel><br>
-              <p style="color: red;" *ngIf="!guestnames.valid">*Input required</p>
+              <!-- <label class="required">Name</label> -->
+              <input class="form-control" name="name" #name="ngModel" type="string" required placeholder="Name*" ngModel><br>
+              <!-- <label class="required">Mother's Name</label> -->
+              <input class="form-control" name="mname" #mname="ngModel" type="string" required placeholder="Mother's name*" ngModel><br>
+              <!-- <label class="required">Father's Name</label> -->
+              <input class="form-control" name="fname" #fname="ngModel" type="string" required placeholder="Father's name*" ngModel><br>
+              <label class="required">Branch</label>
+              <select class="form-control" name="branch" #branch="ngModel" ngModel>
+                <option value="ComputerScienceEngineering">Computer Science Engineering</option>
+                <option value="ElectronicsCommunication Engineering">Electronics & Communication Engineering</option>
+                <option value="ElectricalEngineering">Electrical Engineering</option>
+                <option value="AgriculturalEngineering">Agricultural Engineering</option>
+                <option value="MechanicalEngineering">Mechanical Engineering</option>
+                <option value="MiningEngineering">Mining Engineering</option>
+                <option value="CivilEngineering">Civil Engineering</option>
+              </select>
+              <!-- <label class="required">Email ID</label> -->
+              <input class="form-control" name="email" #email="ngModel" type="email" required placeholder="Email id*" ngModel><br>
+              <!-- <label class="required">Phone number</label> -->
+              <input class="form-control" name="phone" #phone="ngModel" type="number" required placeholder="Phone number*" ngModel><br>
+              <!-- <label class="required">Address</label> -->
+              <input class="form-control" name="address" #address="ngModel" type="string" required placeholder="Address*" ngModel><br>
+              <label class="required">No. of Guests</label>
+              <input class="form-control" name="guestno" #guestno="ngModel" type="number" required min=0 max=2 ngModel><br>
+              <!-- <label class="required">Names of Guests</label> -->
+              <input class="form-control" name="guestnames" #guestnames="ngModel" type="string" required placeholder="Names of guests*" ngModel><br>
               <button [disabled]="!memberObject.valid" class="btn btn-dark btn-block" type="submit">Submit</button>
             </form>
-            </div>
           <!-- / main body -->
           <div class="clear"></div>
         </main>
-      </div>
+    </div>
     </div>
     <!-- JAVASCRIPTS -->
     <script src="../layout/scripts/jquery.min.js"></script>
