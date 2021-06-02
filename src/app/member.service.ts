@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, CollectionReference } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Details } from 'src/models/structure.model';
-import swal from 'sweetalert';
+import swal from 'SweetAlert';
+import * as firebase from 'firebase';
+import { resolve } from 'url';
+import { variable } from '@angular/compiler/src/output/output_ast';
+
 
 @Injectable({
   providedIn: 'root',
@@ -12,17 +16,17 @@ import swal from 'sweetalert';
 export class MemberService {
   object:Details={name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
   result=[]
+  eligible=[]
+  seats=[]
   eligibility=false;
   available = false;
-  // row=['A','B','C','D','E','F','G','H','I','J']
-  // seatrow=[]
-  // seatcol=[]
   guestno;
   seat=[]
+  students=[]
   constructor(public db:AngularFirestore, public router:Router) {
-    //this.getAppMembers();
-    //this.getEligibility(this.search);
-   }
+    
+  }
+  
 
    addData(member)
   {
@@ -42,14 +46,6 @@ export class MemberService {
     this.db.collection("registration").add(tempMember) ;
     this.getSeat();
     
-    //this.seat[1]=this.row[i++]+j++;
-    /*for(i=0;i<1;i++)
-    {
-      for(j=1;j<=2;j++)
-      {
-        this.seat[c++]=this.row[i]+j;
-      }
-    }*/
 
   }
 
@@ -57,9 +53,9 @@ export class MemberService {
   { 
     this.db.collection("seats").doc(member).delete();
   }
-
-  updateData(id,data){
-    this.db.collection("registration").doc(id).set(data);
+  deleteStudent(studentid)
+  { 
+    this.db.collection("eligibilityCriteria").doc(studentid).delete();
   }
 
   getEligibility(member){
@@ -72,13 +68,14 @@ export class MemberService {
         return { id, ...data };
       }))
     ).subscribe(res=>{
-      this.result=res
-      if(!this.result[0])
+      //  console.log(res)
+      this.eligible=res
+      if(!this.eligible[0])
       {
         alert("Wrong info")
       }
       else{
-        this.eligibility=this.result[0].eligibility
+        this.eligibility=this.eligible[0].eligibility
         if(this.eligibility)
         {
             this.available=true;
@@ -99,10 +96,6 @@ export class MemberService {
   return promise;
   }
 
-  getMemberById(id){
-    return this.db.collection("eligible").doc(id).valueChanges()
-  }
-
   getSeat(){
     let c;
     this.db.collection("seats",ref=>ref.orderBy('seatno','asc'))
@@ -113,12 +106,12 @@ export class MemberService {
         return { id, ...data };
       }))
     ).subscribe(res=>{
-      this.result=res
+      this.seats=res
       for(c=0;c<=this.guestno;c++)
       {
-        this.seat[c]=this.result[c].seatno;
-        //console.log(this.result[c])
-        //this.deleteData(this.result[c].id);
+        this.seat[c]=this.seats[c].seatno;
+        //console.log(this.seats[c])
+        //this.deleteData(this.seats[c].id);
 
       }
       //console.log(this.seat)
@@ -130,13 +123,74 @@ export class MemberService {
       });
       for(c=0;c<=this.guestno;c++)
       {
-        console.log(this.result[c])
-        this.deleteData(this.result[c].id);
+        console.log(this.seats[c])
+        this.deleteData(this.seats[c].id);
 
       }
     })
     
   }
+
+getstudents(){
+  this.db.collection("StudentData")
+  .snapshotChanges()
+  .pipe(
+    map(actions => actions.map(a => {
+      const data = a.payload.doc.data() as any;
+      const id = a.payload.doc.id;
+      return { id, ...data };
+    }))
+  ).subscribe(res=>{
+    //  console.log(res)
+    this.students=res
+    console.log(this.students)
+  })
+}
+
+getschedule(){
+  /*console.log(this.auth.loggedinuserid)*/
+  this.db.collection("schedule")
+  .snapshotChanges()
+  .pipe(
+    map(actions => actions.map(a => {
+      const data = a.payload.doc.data() as any;
+      const id = a.payload.doc.id;
+      return { id, ...data };
+    }))
+  ).subscribe(res=>{
+      this.result=res
+      console.log(this.result)
+    })
+  }
+
+  addStudent(member)
+  {
+    let tempStudent:{Name:string,Branch:string,eligibility:string,RollNo:string,YearOfGrad:string}=member
+    tempStudent.Name=member.Name
+    tempStudent.Branch=member.Branch
+    tempStudent.eligibility=member.eligibility
+    tempStudent.RollNo=member.RollNo
+    tempStudent.YearOfGrad=member.YearOfGrad
+    this.db.collection("eligibilityCriteria").add(tempStudent) 
+    swal({
+      title: "Student Registered Successfully",
+      // text: "Hospital registered successfully",
+      icon: "success",
+    });
+    //alert("Student Successfully Added.")
+  }
+  addStudentdata(member)
+  {
+    let tempStudent:{Name:string,Branch:string,eligibility:string,RollNo:string,YearOfGrad:string}=member
+    tempStudent.Name=member.Name
+    tempStudent.Branch=member.Branch
+    tempStudent.eligibility=member.eligibility
+    tempStudent.RollNo=member.RollNo
+    tempStudent.YearOfGrad=member.YearOfGrad
+    this.db.collection("StudentData").add(tempStudent) 
+    //alert("Student Successfully Added.")
+  }
+
 
 }
 
