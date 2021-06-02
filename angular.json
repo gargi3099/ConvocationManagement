@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ConvocationManagement"
+    }
+  },
+  "defaultProject": "ConvocationManagement",
+  "cli": {
+    "analytics": "ccd3c0bf-8ed8-4e98-a932-d5729e9ea4e9"
+  }
 }
