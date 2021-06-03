@@ -15,6 +15,7 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import 'firebase/firestore';
 import { FooterComponent } from './footer/footer.component';
+import { GraduatesComponent } from './graduates/graduates.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     ContactusComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    GraduatesComponent
   ],
   imports: [
     BrowserModule,
