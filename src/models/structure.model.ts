@@ -3,6 +3,7 @@ export class Details{
     mname:string;
     fname:string;
     branch:string;
+    email:string;
     phone:number;
     address:string;
     guestno:number;

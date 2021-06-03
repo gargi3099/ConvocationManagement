@@ -1,0 +1,44 @@
+.main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    padding: 25px;
+    background: rgba(7, 7, 7, 0.87); 
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.required:after {
+    content:" *";
+    color: white;
+}
+
+.title_register{
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+input, select {
+    padding: 5px;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+input::placeholder {
+    color: #eee;
+}
+option:focus {
+    border: none;
+}
+option {
+    background: black; 
+    border: none;
+}

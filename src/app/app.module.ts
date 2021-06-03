@@ -13,9 +13,15 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import 'firebase/firestore';
+import { auth } from 'firebase/app';
 import { FooterComponent } from './footer/footer.component';
 import { GraduatesComponent } from './graduates/graduates.component';
+import { TicketComponent } from './ticket/ticket.component';
+import swal from 'sweetalert';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,9 @@ import { GraduatesComponent } from './graduates/graduates.component';
     ContactusComponent,
     NavbarComponent,
     FooterComponent,
-    GraduatesComponent
+    GraduatesComponent,
+    TicketComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,9 @@ import { GraduatesComponent } from './graduates/graduates.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

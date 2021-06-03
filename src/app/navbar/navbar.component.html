@@ -3,7 +3,7 @@
 <title>Convocation Management</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-</head> -->
+</head> 
 <body id="top">
 <div class="bgded overlay" style="background-image:url('assets/images/abstract.jpg');"> 
   <div class="wrapper row0">
@@ -24,15 +24,60 @@
       <nav id="mainav" class="fl_right"> 
         <ul class="clear">
           <li><a routerLink="/home">Home</a></li>
-          <li><a routerLink="/schedule">Schedule</a></li>
+          <li><a routerLink="/schedule" >Schedule</a></li>
           <li><a routerLink="/register">Register</a></li>
           <li><a routerLink="/awards">Awards</a></li>
-          <li><a routerLink="/contact">Contact Us</a></li>
-          <!-- <li><a href="#">Link Text</a></li> -->
-        </ul>
+          <li><a  routerLink="/contact">Contact Us</a></li>
+          <li><div class="login"><a (click) = "show()">Admin-Login</a></div></li>
+          <li><a href="#">Link Text</a></li> -->
+        <!-- </ul>
       </nav>
     </header>
   </div>
-</div>
-</body>
-<!--  </html> -->
+</div> -->
+      <div class="navbar">
+                <a routerLink="/home" routerLinkActive="active">Home</a>
+               
+                <div class="dropdown">
+                  <button class="dropbtn">Convocation
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a routerLink="/guide" routerLinkActive="active">Convocation invitation</a>
+                    <a routerLink="/symptoms" routerLinkActive="active">Convocation schedule</a>
+                  
+                    
+                  </div>
+                </div>
+                <a href="#about">About</a>
+                <a routerLink="/cure" routerLinkActive="active">Register</a>
+                <a routerLink="/cure" routerLinkActive="active">Awards</a>
+                <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
+                <a routerLink="/login" routerLinkActive="active" >Log Out</a>
+              </div>
+<div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="height: 500px; margin-top: 100px;">
+    <div class="modal-content">
+      <div class="modal-header " style="background-color: #000000; background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);">
+        <h4 class="modal-title" id="myModalLabel" style="color:white;  font-family: 'Times New Roman', Times, serif; size: 35px;">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form name="loginform">
+          <label style="font-family: 'Times New Roman', Times, serif; color: black; font-size: large;">Email</label>
+          <input class="form-control" [(ngModel)]="email" name="email" type="text" required ><br>
+        
+          <label  style="font-family: 'Times New Roman', Times, serif; color: black; font-size: large;">Password</label>
+          <input class="form-control" [(ngModel)]="password" name="password" type="password" required  ><br>
+           
+          <button  class="btn"  (click) = "onSubmit()">Sign-in</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn" data-dismiss="modal" (click) = "hide()">Close</button>
+      
+      </div>
+    
+    </div>
+  </div>
+  </div>
+
