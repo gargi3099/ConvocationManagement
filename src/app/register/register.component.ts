@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
   search={branchS:'a',nameS:'a',eligibility:''}
   constructor(public memberService:MemberService, public router:Router) {
     //memberService.getEligibility(this.search)
+    memberService.getseats();
    }
 
   ngOnInit() {
@@ -51,7 +52,7 @@ export class RegisterComponent implements OnInit {
     console.log(formData)
     this.memberService.addData(formData.value)
     
-    //this.router.navigateByUrl('/ticket')
+    this.router.navigateByUrl('/ticket')
     formData.resetForm()
     //
   }

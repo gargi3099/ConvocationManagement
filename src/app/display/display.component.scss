@@ -1,0 +1,30 @@
+h1 {
+    
+    text-transform: uppercase;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: floralwhite;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ button {
+     background: black;
+     border: none;
+    margin: auto;
+     color: white;
+     font-weight: 400;
+     padding: 8px 20px;
+     border-radius: 10px;
+     font-size: 1em;
+     font-family:  sans-serif;
+     cursor: pointer;
+ }
+ button:hover{
+     background: green;
+ }
+ 

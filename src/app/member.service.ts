@@ -15,7 +15,9 @@ import { variable } from '@angular/compiler/src/output/output_ast';
 })
 export class MemberService {
   object:Details={name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
+  sdata=[]
   result=[]
+  result1 :any;
   eligible=[]
   seats=[]
   eligibility=false;
@@ -23,6 +25,13 @@ export class MemberService {
   guestno;
   seat=[]
   students=[]
+  rname;
+  rbranch;
+  reid;
+  rphn;
+  rguestno;
+  bookedseats=[];
+  
   constructor(public db:AngularFirestore, public router:Router) {
     
   }
@@ -41,11 +50,44 @@ export class MemberService {
     tempMember.address=member.address
     tempMember.guestno=member.guestno
     tempMember.guestnames=member.guestnames
-
-    this.guestno = member.guestno
-    this.db.collection("registration").add(tempMember) ;
-    this.getSeat();
     
+    
+    this.rname=member.name
+    this.rbranch=member.branch
+    this.reid=member.email
+    this.rphn=member.phone
+    this.guestno = member.guestno
+    this.rguestno = member.guestno
+    
+    this.db.collection("registration").add(tempMember) ;
+    // this.getSeat();
+    
+
+  }
+  addSeats(Name,Branch,Email,seats)
+  {
+     let tempSeat:{Name:string,Branch:string,Email:string,seats}={Name:"",Branch:"",Email:"",seats:[]}
+  
+    
+    tempSeat.Name=Name
+    tempSeat.Branch=Branch
+    tempSeat.Email=Email
+    tempSeat.seats=seats;
+     this.bookedseats=seats;
+
+    this.db.collection("Seats").add(tempSeat) 
+    
+    
+    // alert("Distributor Successfully Added.")
+  }
+
+  seatData(k){
+    var washingtonRef = this.db.collection("SeatArray").doc("Sarray");
+
+// Atomically add a new region to the "regions" array field.
+   washingtonRef.update({
+    regions: firebase.firestore.FieldValue.arrayUnion(k)
+});
 
   }
 
@@ -131,6 +173,25 @@ export class MemberService {
     
   }
 
+  getMemberById(id){
+    return this.db.collection("registration").doc(id).valueChanges()
+  }
+
+
+  getAppMembers(branch){
+    this.db.collection("eligibilityCriteria",ref=>ref.where('Branch','==',branch))
+     .snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as any;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+    ).subscribe(res=>{
+      this.result1=res;
+      console.log(res)
+    })
+    
+  }
 getstudents(){
   this.db.collection("StudentData")
   .snapshotChanges()
@@ -163,6 +224,22 @@ getschedule(){
     })
   }
 
+  getseats(){
+    /*console.log(this.auth.loggedinuserid)*/
+    this.db.collection("SeatArray")
+    .snapshotChanges()
+    .pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as any;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+    ).subscribe(res=>{
+        this.sdata=res
+        console.log(this.sdata)
+      })
+    }
+
   addStudent(member)
   {
     let tempStudent:{Name:string,Branch:string,eligibility:string,RollNo:string,YearOfGrad:string}=member
@@ -189,6 +266,17 @@ getschedule(){
     tempStudent.YearOfGrad=member.YearOfGrad
     this.db.collection("StudentData").add(tempStudent) 
     //alert("Student Successfully Added.")
+  }
+  addContactForm(member)
+  {
+    let tempStudent:{FirstName:string,LastName:string,Message:string,Email:string,Contact:number}=member
+    tempStudent.FirstName=member.FirstName
+    tempStudent.LastName=member.LastName
+    tempStudent.Message=member.Message
+    tempStudent.Email=member.Email
+    tempStudent.Contact=member.Contact
+    this.db.collection("ContactForm").add(tempStudent) 
+    // alert("Distributor Successfully Added.")
   }
 
 

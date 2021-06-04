@@ -1,0 +1,79 @@
+<body>      
+<div class="center">
+    <form (ngSubmit)="searchStudent(details)" #details="ngForm">
+        <div class="row mx-auto">
+        
+            <div  class="form-row">
+                <div class="form-group text-center text-secondary">
+                <label  style="color: black; margin-left: 170px; font-family: 'Times New Roman', Times, serif; font-size: 20px;">Branch</label>
+                
+                <select name="branch"  #branch="ngModel" ngModel>
+                    <option selected>Choose...</option>
+                    <option >Computer Science Engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Electrical Engineering</option>
+                    <option>Agriculture Engineering</option>
+                    <option>Mining Engineering</option>
+                    <option>Electronics and Communication Engineering</option>
+                </select>
+            
+                </div>
+            
+            <br>
+        
+            <button type="submit" class="buttonk">Search</button>
+        
+        <br>
+        <br>
+
+         </div>
+         <div class="col-lg-3"></div>
+       </div>
+    
+    </form>
+</div>
+
+<div *ngIf="isclicked">
+    
+       <!--<table>
+            <tr>
+                
+                <th class="thead-dark" colspan="4">Name</th>
+                <th class="thead-dark" colspan="4">Branch</th>
+                
+           </tr>
+           <tr *ngFor="let item of memberService.result1">
+            <td colspan="4"  class="stage-earth">{{item.Name}}<span></span></td>
+            <td colspan="4"  class="stage-earth">{{item.Branch}}<span></span></td>
+            </tr>
+        </table>-->
+
+
+        <table class="center">
+            
+            <tr>
+            <th>Name</th>
+            <th>Branch</th>
+            <th>Roll No</th>
+            </tr>
+        
+        
+            <tr *ngFor="let item of memberService.result1">
+            <td class="stage-saturn">{{item.Name}}</td>
+            <td class="stage-earth">{{item.Branch}}</td>
+            <td class="stage-earth">{{item.RollNo}}</td>
+            </tr>
+        
+          </table>
+          
+    
+
+
+
+    
+    </div>
+    
+
+</body>
+<!--<app-footer></app-footer>-->

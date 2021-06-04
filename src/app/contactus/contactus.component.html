@@ -1,1 +1,98 @@
-<h1 style="text-align: center;">contactus works!</h1>
+
+    <head>
+        <!-- <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    </head>
+    <body>
+        <div class="page">
+            
+              <div class="invite">
+               
+                    <img class="cg" src="/assets/images/deanc.jpg" style="width:100px"> 
+                    <div class="text" style="color: black;font-family:'Times New Roman', Times, serif;font-size: 15px;">
+                     <b>  Dr. Ajay Kumar Sharma</b> <br>
+
+                       Professor & Dean<br>
+
+                       College of Technology and Engineering<br>
+                       Udaipur-313001<br><br>
+                       Phone: +91 294 2470837 (O)<br>
+                       
+                       Email:  deanctae@mpuat.ac.in ,  ctaedean@gmail.com  <br>
+                              
+                    </div>
+                </div><br>
+               <section>
+                   
+    <div class="container">
+      <div class="contactinfo">
+        <div>
+          <h2>Contact Info</h2>
+          <ul class="info">
+            <li>
+              <span><i class="fa fa-map-marker" style="font-size:36px"></i></span>
+                <span>University Road,Udaipur</span>
+            </li>
+            <li>
+              <span><i class="fa fa-phone" style="font-size:36px"></i> </span>
+                <span>011-76749683</span>
+            </li>
+            <li>
+              <span><i class="fa fa-envelope" style="font-size:36px"></i></span>
+                <span>ctaesupport@gmail.com</span>
+            </li>
+           
+          </ul>
+         
+        </div></div>
+        <div class="contactForm">
+         
+            <h2><b>GET IN TOUCH</b></h2>
+               <p style="color: black;"> We would love to hear from you!!!</p><br>
+               <form ngNativeValidate (ngSubmit)="addContact(memberObject)" #memberObject="ngForm" >
+            <div class="formBox">
+             
+              <div class="inputBox w50">
+                <!-- <span>First Name</span> -->
+                <input type="text" #FirstName="ngModel" ngModel name="FirstName" required placeholder="First Name">
+               
+           </div>
+           <div class="inputBox w50">
+            <!-- <span>Last Name</span> -->
+            <input type="text" #LastName="ngModel" ngModel name="LastName" required placeholder="Last Name">
+           
+       </div>
+       <div class="inputBox w50">
+        <!-- <span>Email Address</span> -->
+        <input type="text" #Email="ngModel" ngModel name="Email" required placeholder="Email Address">
+       
+   </div>
+   <div class="inputBox w50">
+    <!-- <span>Mobile Number</span> -->
+    <input type="text"  #Contact="ngModel" ngModel name="Contact" required placeholder="Mobile Number">
+    
+</div>
+   <div class="inputBox w100">
+    <!-- <span>Message</span> -->
+    <input type="textarea"  #Message="ngModel" ngModel name="Message"  required placeholder="Message">
+    
+</div>
+
+  <div class="inputBox w100">
+    <input type="submit" value="SUBMIT">
+  </div>
+
+
+           </div>
+          </form>
+       </div>
+      
+    </div>
+  
+  </section>
+        <br><br>     
+        </div>
+     
+    </body>
