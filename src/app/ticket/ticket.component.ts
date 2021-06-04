@@ -55,15 +55,29 @@ Rgno=this.member.rguestno;
     }
   }
 
-  checkCheckBoxValue(event){
+  checkCheckBoxValue(v,event){
     if(event.target.checked){
 
     console.log(event.target.value);
     this.seats.push(event.target.value)
     console.log(this.seats)
     }
+    if(!event.target.checked){
+      console.log(event.target.value)
+      var index=this.seats.indexOf(v)
+    this.seats.splice(index,1)
+    console.log(this.seats)
+    }
   }
   addseats(){
+    if(this.seats.length>2){
+      swal({
+        text: "You can select maximum 2 seats",
+        icon: "error",
+      });
+       
+    }
+    else{
     swal({
       text: "Your seats are booked!",
       icon: "success",
@@ -77,7 +91,7 @@ Rgno=this.member.rguestno;
     for(this.i=0;this.i<this.seats.length;this.i++){
       this.member.seatData(this.seats[this.i]);
     }
-   
+  }
     
     }
 
