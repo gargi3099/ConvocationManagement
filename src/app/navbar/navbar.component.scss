@@ -30,13 +30,14 @@ font-family: 'Times New Roman', Times, serif;
   //background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   background-image: url('/assets/images/abstract.jpg');
   // background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
-  font-family: Arial;
+  font-family:'Times New Roman', Times, serif;
+  font-size:30px
 }
 
 /* Links inside the navbar */
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 20px;
   color: #FFF;
   text-align: center;
   padding: 14px 16px;
@@ -122,4 +123,6 @@ font-family: 'Times New Roman', Times, serif;
   background-repeat: no-repeat;
 }
 
-
+.admin{
+  cursor: pointer;
+}

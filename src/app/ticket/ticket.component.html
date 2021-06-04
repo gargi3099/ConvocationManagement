@@ -1135,14 +1135,16 @@
 
                 </table>
 
-                <div class="screen">
+                <!-- <div class="screen">
                     <h2 class="wthree">Screen this way</h2>
-                </div>
-                <button type="submit" (click)="addseats()">Confirm Seat</button>
+                </div> -->
+                <br>
+                <button style="width: 200px;" type="submit" (click)="addseats()" [disabled]="!isok">Confirm Seat</button>
+                <p style="color: red; margin-top: 4px;">*NOTE: Selection of seats less than the number of guests is not allowed. </p>
                 <br><br><br>
             </div></form>
           
-            <div class="displayerBoxes txt-center">
+            <div style="margin-left: 180px;" class="displayerBoxes txt-center">
                 <table class="Displaytable w3ls-table" width="100%">
                     <tr>
                         <th>Name</th>
@@ -1162,7 +1164,7 @@
                     </tr>
                 </table>
                 <br>
-                <button class="print" type="submit" (click)="print()">Print Seats</button>
+                <button style="margin-left: 174px; width: 200px;" class="print" type="submit" [disabled]="!isok" (click)="print()">Print Seats</button>
             </div>
         </div>
       

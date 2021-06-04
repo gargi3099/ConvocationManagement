@@ -1,13 +1,14 @@
 <body >
-  <br><br>
     <div class="bgded overlay" style="background-image:url('assets/images/background.jpg');"> 
-      <div class="main-block" style="margin-left: 475px;" *ngIf="!this.memberService.available"> 
+      <br>
+      <div class="main-block" style="margin-left: 445px;" *ngIf="!this.memberService.available"> 
         <div id="breadcrumb" class="title_register"> 
           <i class="fas fa-search" style="font-size: 53px;">Check Eligibility</i> 
         </div>
           <main class="info">           
               <form (ngSubmit)="submitSearch(searchObject)" #searchObject="ngForm">
-                <input class="form-control" name="nameS" #nameS="ngModel" type="string" required placeholder="Name*" ngModel><br>
+                <label class="required">Name</label>
+                <input  class="form-control" name="nameS" #nameS="ngModel" type="string" required ngModel><br>
                 <label class="required">Branch</label>
                 <select class="form-control" name="branchS" #branchS="ngModel" ngModel>
                   <option value="ComputerScienceEngineering">Computer Science Engineering</option>
@@ -23,15 +24,16 @@
             <!-- / main body -->
             <div class="clear"></div>
           </main>
+          <br>
       </div>
-      <div class="main-block" style="margin-left: 475px;" *ngIf="this.memberService.available"> 
+      <div class="main-block" style="width: 900px; margin-left: 230px; padding: 10px;" *ngIf="this.memberService.available"> 
       <div id="breadcrumb" class="title_register"> 
         <i class="fas fa-pencil-alt" style="font-size: 113px;">Register</i> 
-      </div>
+      </div >
         <main class="info">           
             <form (ngSubmit)="submitCall(memberObject)" #memberObject="ngForm">
               <!-- <label class="required">Name</label> -->
-              <input class="form-control" name="name" #name="ngModel" type="string" required placeholder="Name*" ngModel><br>
+              <input style="width: 700px;" class="form-control" name="name" #name="ngModel" type="string" required placeholder="Name*" ngModel><br>
               <!-- <label class="required">Mother's Name</label> -->
               <input class="form-control" name="mname" #mname="ngModel" type="string" required placeholder="Mother's name*" ngModel><br>
               <!-- <label class="required">Father's Name</label> -->
@@ -62,8 +64,9 @@
           <div class="clear"></div>
         </main>
     </div>
+    <br>
     </div>
-    <br><br>
+   
     <!-- JAVASCRIPTS -->
     <script src="../layout/scripts/jquery.min.js"></script>
     <script src="../layout/scripts/jquery.backtotop.js"></script>

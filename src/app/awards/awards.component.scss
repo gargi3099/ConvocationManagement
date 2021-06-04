@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     display: flex;
    text-transform: uppercase;
-    font-family: 'Asap Condensed', sans-serif;
+    font-family:'Times New Roman', Times, serif;
  }
 
   top {
@@ -25,16 +25,18 @@ body {
   h3 {
     font-size: 26px;
   }
-  
+  h1:hover{
+    cursor: pointer;
+  }
   .italic {
     font-style: italic;
   }
   
   .card {
     position: relative;
-    margin: auto;
-    margin-right: 70px;
-    margin-top: 80px;
+ margin-left: 117px;
+   
+    margin-top: 150px;
     height: 300px;
     width: 500px;
     text-align: center;

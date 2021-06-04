@@ -82,7 +82,7 @@ video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    font-family: 'Times New Roman', Times, serif;
     vertical-align: baseline;
 }
 
@@ -302,7 +302,7 @@ h1 {
     letter-spacing: 2px;
     text-align: center;
     margin: 0.8em 1vw .9em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h2 {
@@ -355,7 +355,7 @@ input[type="number"] {
     width: 80%;
     background: transparent;
     border: 1px solid #888686;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1em;
     margin-top: 10px;
     color:black;
@@ -375,7 +375,7 @@ button {
     border-radius: 10px;
     font-size: 1em;
     letter-spacing: 1px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
 }
 button:hover{

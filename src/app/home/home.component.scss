@@ -1,6 +1,7 @@
 body{
     min-height: 1550px;
     overflow-y: hidden;
+    font-family: 'Times New Roman', Times, serif;
     background-color:floralwhite;
 }
 .page{
@@ -23,7 +24,7 @@ body{
     //background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
     // background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
     background-image: url('/assets/images/abstract.jpg');
-    font-family: Arial;
+    font-family:'Times New Roman', Times, serif;
   }
   
   /* Links inside the navbar */

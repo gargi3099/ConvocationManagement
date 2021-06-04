@@ -1,24 +1,13 @@
-<body>
-
-
-
-
-
-
-
-    
-    
-
-          
+<body>      
 <div class="center">
     <form (ngSubmit)="searchStudent(details)" #details="ngForm">
         <div class="row mx-auto">
         
-            <div class="form-row">
+            <div  class="form-row">
                 <div class="form-group text-center text-secondary">
-                <label style="color: black;">Branch</label>
+                <label  style="color: black; margin-left: 170px; font-family: 'Times New Roman', Times, serif; font-size: 20px;">Branch</label>
                 
-                <select name="branch" style="margin: auto;" class="form-control" #branch="ngModel" ngModel>
+                <select name="branch"  #branch="ngModel" ngModel>
                     <option selected>Choose...</option>
                     <option >Computer Science Engineering</option>
                     <option>Civil Engineering</option>
@@ -33,7 +22,7 @@
             
             <br>
         
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="submit" class="buttonk">Search</button>
         
         <br>
         <br>

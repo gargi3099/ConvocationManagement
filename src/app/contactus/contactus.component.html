@@ -11,7 +11,7 @@
               <div class="invite">
                
                     <img class="cg" src="/assets/images/deanc.jpg" style="width:100px"> 
-                    <div class="text" style="color: black;font-family: sans-serif;font-size: 15px;">
+                    <div class="text" style="color: black;font-family:'Times New Roman', Times, serif;font-size: 15px;">
                      <b>  Dr. Ajay Kumar Sharma</b> <br>
 
                        Professor & Dean<br>
@@ -51,30 +51,32 @@
          
             <h2><b>GET IN TOUCH</b></h2>
                <p style="color: black;"> We would love to hear from you!!!</p><br>
+               <form ngNativeValidate (ngSubmit)="addContact(memberObject)" #memberObject="ngForm" >
             <div class="formBox">
+             
               <div class="inputBox w50">
                 <!-- <span>First Name</span> -->
-                <input type="text" name="" required placeholder="First Name">
+                <input type="text" #FirstName="ngModel" ngModel name="FirstName" required placeholder="First Name">
                
            </div>
            <div class="inputBox w50">
             <!-- <span>Last Name</span> -->
-            <input type="text" required placeholder="Last Name">
+            <input type="text" #LastName="ngModel" ngModel name="LastName" required placeholder="Last Name">
            
        </div>
        <div class="inputBox w50">
         <!-- <span>Email Address</span> -->
-        <input type="text" required placeholder="Email Address">
+        <input type="text" #Email="ngModel" ngModel name="Email" required placeholder="Email Address">
        
    </div>
    <div class="inputBox w50">
     <!-- <span>Mobile Number</span> -->
-    <input type="text" required placeholder="Mobile Number">
+    <input type="text"  #Contact="ngModel" ngModel name="Contact" required placeholder="Mobile Number">
     
 </div>
    <div class="inputBox w100">
     <!-- <span>Message</span> -->
-    <input type="textarea" required placeholder="Message">
+    <input type="textarea"  #Message="ngModel" ngModel name="Message"  required placeholder="Message">
     
 </div>
 
@@ -84,6 +86,7 @@
 
 
            </div>
+          </form>
        </div>
       
     </div>

@@ -22,6 +22,7 @@ Name=this.member.rname;
 Branch=this.member.rbranch;
 Email=this.member.reid;
 Rgno=this.member.rguestno;
+isok:boolean=false;
 // @ViewChild('v') ad :ElementRef;
   constructor(public member:MemberService, public router:Router,@Inject(DOCUMENT) document) { 
     // member.getseats();
@@ -68,16 +69,35 @@ Rgno=this.member.rguestno;
     this.seats.splice(index,1)
     console.log(this.seats)
     }
-  }
-  addseats(){
-    if(this.seats.length>2){
+
+  
+    if(this.seats.length>this.Rgno ){
+      this.isok=false
       swal({
-        text: "You can select maximum 2 seats",
-        icon: "error",
-      });
-       
+        text:"Select Right number of Seats",
+        icon:"error",
+        
+      })
+    }
+    else if(this.seats.length==0 || this.seats.length<this.Rgno){
+      this.isok=false
     }
     else{
+      this.isok=true
+     
+    }
+  
+  }
+  addseats(){
+//   if(this.onemore){
+// swal({
+//   text:"Select Right number of Seats",
+//   icon:"error",
+  
+// })
+//     }
+    // else{
+     
     swal({
       text: "Your seats are booked!",
       icon: "success",
@@ -93,6 +113,6 @@ Rgno=this.member.rguestno;
     }
   }
     
-    }
+    //}
 
 }
