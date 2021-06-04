@@ -1,0 +1,1171 @@
+<div class="body">
+    <br><br>
+    <h1>Convocation Seat Selection</h1>
+    <div class="container">
+        <div class="w3ls-reg">
+            <!-- input fields -->
+            <!-- <div class="inputForm"> -->
+                <form ngNativeValidate >
+                <h2 style="font-weight: 250;">Check your registration details below and select your seats :</h2>
+                <div class="mr_agilemain">
+                    <div class="agileits-left">
+                        <label class="mr_agilemain"> Name
+                            <!-- <span>*</span> -->
+                        </label>
+                        <input [(ngModel)]="Name" type="text" id="name" name="Name" >
+                    </div>
+                    <div class="agileits-left">
+                        <label class="mr_agilemain"> Branch
+                            <!-- <span>*</span> -->
+                        </label>
+                        <input  [(ngModel)]="Branch"  type="text" id="branch" name="Branch" >
+                    </div>
+                    <div class="agileits-left">
+                        <label class="mr_agilemain"> Email 
+                            <!-- <span>*</span> -->
+                        </label>
+                        <input   [(ngModel)]="Email"  type="text" id="email" name="Email" >
+                    </div>
+
+                    <!-- <div class="agileits-right">
+                        <label> Branch
+                             <span>*</span> 
+                        </label>
+                        <input type="number" id="Numseats"  required min="1">
+                    </div> -->
+                </div>
+              
+            <!-- </div> -->
+            <!-- //input fields -->
+            <!-- seat availabilty list -->
+            <ul class="seat_w3ls">
+                <li class="smallBox greenBox">Selected/Booked Seat</li>
+
+                <li class="smallBox redBox">Reserved Seat</li>
+
+                <li class="smallBox emptyBox">Empty Seat</li>
+            </ul>
+            <!-- seat availabilty list -->
+            <!-- seat layout -->
+            <div class="seatStructure txt-center"   >
+                <table id="seatsBlock">
+                    <p id="notification"></p>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td></td>
+                        <td></td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td></td>
+                        <td></td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>
+                            <input type="checkbox"   class="seats" id="A1" (change)="checkCheckBoxValue($event)" value="A1">
+                        </td>
+                        <td>
+                            <input type="checkbox"  class="seats" id="A2" (change)="checkCheckBoxValue($event)" value="A2">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A3" (change)="checkCheckBoxValue($event)" value="A3" >
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A4" (change)="checkCheckBoxValue($event)" value="A4" >
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A5" (change)="checkCheckBoxValue($event)" value="A5" >
+                        </td>
+                        
+                        <td>
+                            <input type="checkbox" class="seats" id="A6" (change)="checkCheckBoxValue($event)"  value="A6">
+                        </td>
+                        <td>
+                            <input type="checkbox"  class="seats" id="A7" (change)="checkCheckBoxValue($event)" value="A7">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A8" (change)="checkCheckBoxValue($event)" value="A8">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A9" (change)="checkCheckBoxValue($event)" value="A9">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A10" (change)="checkCheckBoxValue($event)" value="A10">
+                        </td>
+                        <td class="seatGap"></td>
+                        <td class="seatGap"></td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A11" (change)="checkCheckBoxValue($event)" value="A11">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A12" (change)="checkCheckBoxValue($event)" value="A12">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A13" (change)="checkCheckBoxValue($event)" value="A13">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A14" (change)="checkCheckBoxValue($event)" value="A14">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A15" (change)="checkCheckBoxValue($event)" value="A15" >
+                        </td>
+                        
+                        <td>
+                            <input type="checkbox" class="seats" id="A16" (change)="checkCheckBoxValue($event)" value="A16">
+                        </td>
+                        <td>
+                            <input type="checkbox"  class="seats" id="A17" (change)="checkCheckBoxValue($event)" value="A17">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A18" (change)="checkCheckBoxValue($event)" value="A18" >
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A19" (change)="checkCheckBoxValue($event)" value="A19">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A20" (change)="checkCheckBoxValue($event)" value="A20">
+                        </td>
+                        <td class="seatGap">       </td>
+                        <td class="seatGap">       </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A21" (change)="checkCheckBoxValue($event)" value="A21">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A22" (change)="checkCheckBoxValue($event)" value="A22">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A23"  (change)="checkCheckBoxValue($event)" value="A23">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A24" (change)="checkCheckBoxValue($event)" value="A24">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A25" (change)="checkCheckBoxValue($event)" value="A25">
+                        </td>
+                        
+                        <td>
+                            <input type="checkbox" class="seats" id="A26" (change)="checkCheckBoxValue($event)"  value="A26">
+                        </td>
+                        <td>
+                            <input type="checkbox"  class="seats" id="A27" (change)="checkCheckBoxValue($event)" value="A27"> 
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A28" (change)="checkCheckBoxValue($event)" value="A28">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A29" (change)="checkCheckBoxValue($event)" value="A29">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="A30" (change)="checkCheckBoxValue($event)"  value="A30">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>B</td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B1" (change)="checkCheckBoxValue($event)"  value="B1">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B2" (change)="checkCheckBoxValue($event)"  value="B2">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B3"  (change)="checkCheckBoxValue($event)"  value="B3">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B4"  (change)="checkCheckBoxValue($event)"  value="B4">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B5"  (change)="checkCheckBoxValue($event)"  value="B5">
+                        </td>
+                       
+                        <td>
+                            <input type="checkbox" class="seats" id="B6" (change)="checkCheckBoxValue($event)"  value="B6">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B7"  (change)="checkCheckBoxValue($event)"  value="B7"> 
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B8" (change)="checkCheckBoxValue($event)"  value="B8">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B9"  (change)="checkCheckBoxValue($event)"  value="B9">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B10" (change)="checkCheckBoxValue($event)"  value="B10">
+                        </td>
+                        <td class="seatGap"></td>
+                        <td class="seatGap"></td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B11"  (change)="checkCheckBoxValue($event)"  value="B11">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B12"  (change)="checkCheckBoxValue($event)"  value="B12">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B13" (change)="checkCheckBoxValue($event)"  value="B13">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B14"  (change)="checkCheckBoxValue($event)"  value="B14">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B15"  (change)="checkCheckBoxValue($event)"  value="B15">
+                        </td>
+                        
+                        <td>
+                            <input type="checkbox" class="seats" id="B16"  (change)="checkCheckBoxValue($event)"  value="B16">
+                        </td>
+                        <td>
+                            <input type="checkbox" id="A7" class="seats" id="B17"  (change)="checkCheckBoxValue($event)"  value="B17">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B18"  (change)="checkCheckBoxValue($event)"  value="B18">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B19"  (change)="checkCheckBoxValue($event)"  value="B19">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B20"  (change)="checkCheckBoxValue($event)"  value="B20">
+                        </td>
+                        <td class="seatGap"></td>
+                        <td class="seatGap"></td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B21"  (change)="checkCheckBoxValue($event)"  value="B21">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B22"  (change)="checkCheckBoxValue($event)"  value="B22">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B23" (change)="checkCheckBoxValue($event)"  value="B23">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B24"  (change)="checkCheckBoxValue($event)"  value="B24">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B25"  (change)="checkCheckBoxValue($event)"  value="B25">
+                        </td>
+                        
+                        <td>
+                            <input type="checkbox" class="seats" id="B26"  (change)="checkCheckBoxValue($event)"  value="B26">
+                        </td>
+                        <td>
+                            <input type="checkbox" id="A7" class="seats" id="B27"  (change)="checkCheckBoxValue($event)"  value="B27">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B28" (change)="checkCheckBoxValue($event)"  value="B28">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B29"  (change)="checkCheckBoxValue($event)"  value="B29">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="B30"  (change)="checkCheckBoxValue($event)"  value="B30">
+                        </td>
+
+                        </tr>
+
+                    <tr>
+                        <td>C</td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C1"  (change)="checkCheckBoxValue($event)"  value="C1">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C2"  (change)="checkCheckBoxValue($event)"  value="C2">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C3" (change)="checkCheckBoxValue($event)"  value="C3">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C4"  (change)="checkCheckBoxValue($event)"  value="C4">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C5" (change)="checkCheckBoxValue($event)"  value="C5">
+                        </td>
+                       
+                        <td>
+                            <input type="checkbox" class="seats" id="C6"  (change)="checkCheckBoxValue($event)"  value="C6">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C7"  (change)="checkCheckBoxValue($event)"  value="C7">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C8" (change)="checkCheckBoxValue($event)"  value="C8">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C9" (change)="checkCheckBoxValue($event)"  value="C9">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C10"  (change)="checkCheckBoxValue($event)"  value="C10">
+                        </td>
+                        <td class="seatGap"></td>
+                        <td class="seatGap"></td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C11"  (change)="checkCheckBoxValue($event)"  value="C11">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C12"  (change)="checkCheckBoxValue($event)"  value="C12">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C13" (change)="checkCheckBoxValue($event)"  value="C13">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C14"  (change)="checkCheckBoxValue($event)"  value="C14">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C15"  (change)="checkCheckBoxValue($event)"  value="C15">
+                        </td>
+                        
+                        <td>
+                            <input type="checkbox" class="seats" id="C16"  (change)="checkCheckBoxValue($event)"  value="C16">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C17"  (change)="checkCheckBoxValue($event)"  value="C17">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C18"  (change)="checkCheckBoxValue($event)"  value="C18">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C19"  (change)="checkCheckBoxValue($event)"  value="C19">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C20"  (change)="checkCheckBoxValue($event)"  value="C20">
+                        </td>
+                       
+
+                        <td class="seatGap"></td>
+                        <td class="seatGap"></td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C21"  (change)="checkCheckBoxValue($event)"  value="C21">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C22"  (change)="checkCheckBoxValue($event)"  value="C22">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C23" (change)="checkCheckBoxValue($event)"  value="C23">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C24"  (change)="checkCheckBoxValue($event)"  value="C24">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C25"  (change)="checkCheckBoxValue($event)"  value="C25">
+                        </td>
+                        
+                        <td>
+                            <input type="checkbox" class="seats" id="C26"  (change)="checkCheckBoxValue($event)"  value="C26">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C27" (change)="checkCheckBoxValue($event)"  value="C27">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C28" (change)="checkCheckBoxValue($event)"  value="C28">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C29"  (change)="checkCheckBoxValue($event)"  value="C29">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" id="C30"  (change)="checkCheckBoxValue($event)"  value="C30">
+                        </td>
+                       
+                    </tr>
+
+                    <tr>
+                        <td>D</td>
+                        
+  <td>
+    <input type="checkbox" class="seats" id="D1"  (change)="checkCheckBoxValue($event)"  value="D1">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D2"  (change)="checkCheckBoxValue($event)"  value="D2">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D3" (change)="checkCheckBoxValue($event)"  value="D3">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D4"  (change)="checkCheckBoxValue($event)"  value="D4">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D5" (change)="checkCheckBoxValue($event)"  value="D5">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="D6"  (change)="checkCheckBoxValue($event)"  value="D6">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D7"  (change)="checkCheckBoxValue($event)"  value="D7">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D8" (change)="checkCheckBoxValue($event)"  value="D8">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D9" (change)="checkCheckBoxValue($event)"  value="D9">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D10"  (change)="checkCheckBoxValue($event)"  value="D10">
+</td>
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="D11"  (change)="checkCheckBoxValue($event)"  value="D11">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D12"  (change)="checkCheckBoxValue($event)"  value="D12">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D13" (change)="checkCheckBoxValue($event)"  value="D13">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D14"  (change)="checkCheckBoxValue($event)"  value="D14">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D15"  (change)="checkCheckBoxValue($event)"  value="D15">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="D16"  (change)="checkCheckBoxValue($event)"  value="D16">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D17"  (change)="checkCheckBoxValue($event)"  value="D17">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D18"  (change)="checkCheckBoxValue($event)"  value="D18">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D19"  (change)="checkCheckBoxValue($event)"  value="D19">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D20"  (change)="checkCheckBoxValue($event)"  value="D20">
+</td>
+
+
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="D21"  (change)="checkCheckBoxValue($event)"  value="D21">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D22"  (change)="checkCheckBoxValue($event)"  value="D22">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D23" (change)="checkCheckBoxValue($event)"  value="D23">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D24"  (change)="checkCheckBoxValue($event)"  value="D24">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D25"  (change)="checkCheckBoxValue($event)"  value="D25">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="D26"  (change)="checkCheckBoxValue($event)"  value="D26">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D27" (change)="checkCheckBoxValue($event)"  value="D27">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D28" (change)="checkCheckBoxValue($event)"  value="D28">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D29"  (change)="checkCheckBoxValue($event)"  value="D29">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="D30"  (change)="checkCheckBoxValue($event)"  value="D30">
+</td>
+
+
+                    </tr>
+                    <tr><td>E</td>
+                       
+  <td>
+    <input type="checkbox" class="seats" id="E1"  (change)="checkCheckBoxValue($event)"  value="E1">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E2"  (change)="checkCheckBoxValue($event)"  value="E2">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E3" (change)="checkCheckBoxValue($event)"  value="E3">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E4"  (change)="checkCheckBoxValue($event)"  value="E4">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E5" (change)="checkCheckBoxValue($event)"  value="E5">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="E6"  (change)="checkCheckBoxValue($event)"  value="E6">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E7"  (change)="checkCheckBoxValue($event)"  value="E7">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E8" (change)="checkCheckBoxValue($event)"  value="E8">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E9" (change)="checkCheckBoxValue($event)"  value="E9">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E10"  (change)="checkCheckBoxValue($event)"  value="E10">
+</td>
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="E11"  (change)="checkCheckBoxValue($event)"  value="E11">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E12"  (change)="checkCheckBoxValue($event)"  value="E12">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E13" (change)="checkCheckBoxValue($event)"  value="E13">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E14"  (change)="checkCheckBoxValue($event)"  value="E14">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E15"  (change)="checkCheckBoxValue($event)"  value="E15">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="E16"  (change)="checkCheckBoxValue($event)"  value="E16">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E17"  (change)="checkCheckBoxValue($event)"  value="E17">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E18"  (change)="checkCheckBoxValue($event)"  value="E18">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E19"  (change)="checkCheckBoxValue($event)"  value="E19">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E20"  (change)="checkCheckBoxValue($event)"  value="E20">
+</td>
+
+
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="E21"  (change)="checkCheckBoxValue($event)"  value="E21">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E22"  (change)="checkCheckBoxValue($event)"  value="E22">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E23" (change)="checkCheckBoxValue($event)"  value="E23">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E24"  (change)="checkCheckBoxValue($event)"  value="E24">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E25"  (change)="checkCheckBoxValue($event)"  value="E25">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="E26"  (change)="checkCheckBoxValue($event)"  value="E26">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E27" (change)="checkCheckBoxValue($event)"  value="E27">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E28" (change)="checkCheckBoxValue($event)"  value="E28">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E29"  (change)="checkCheckBoxValue($event)"  value="E29">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="E30"  (change)="checkCheckBoxValue($event)"  value="E30">
+</td>
+
+
+                       
+                    </tr>
+                   
+                    <tr>
+                        <td>F</td>
+                       
+  <td>
+    <input type="checkbox" class="seats" id="F1"  (change)="checkCheckBoxValue($event)"  value="F1">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F2"  (change)="checkCheckBoxValue($event)"  value="F2">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F3" (change)="checkCheckBoxValue($event)"  value="F3">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F4"  (change)="checkCheckBoxValue($event)"  value="F4">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F5" (change)="checkCheckBoxValue($event)"  value="F5">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="F6"  (change)="checkCheckBoxValue($event)"  value="F6">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F7"  (change)="checkCheckBoxValue($event)"  value="F7">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F8" (change)="checkCheckBoxValue($event)"  value="F8">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F9" (change)="checkCheckBoxValue($event)"  value="F9">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F10"  (change)="checkCheckBoxValue($event)"  value="F10">
+</td>
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="F11"  (change)="checkCheckBoxValue($event)"  value="F11">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F12"  (change)="checkCheckBoxValue($event)"  value="F12">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F13" (change)="checkCheckBoxValue($event)"  value="F13">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F14"  (change)="checkCheckBoxValue($event)"  value="F14">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F15"  (change)="checkCheckBoxValue($event)"  value="F15">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="F16"  (change)="checkCheckBoxValue($event)"  value="F16">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F17"  (change)="checkCheckBoxValue($event)"  value="F17">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F18"  (change)="checkCheckBoxValue($event)"  value="F18">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F19"  (change)="checkCheckBoxValue($event)"  value="F19">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F20"  (change)="checkCheckBoxValue($event)"  value="F20">
+</td>
+
+
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="F21"  (change)="checkCheckBoxValue($event)"  value="F21">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F22"  (change)="checkCheckBoxValue($event)"  value="F22">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F23" (change)="checkCheckBoxValue($event)"  value="F23">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F24"  (change)="checkCheckBoxValue($event)"  value="F24">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F25"  (change)="checkCheckBoxValue($event)"  value="F25">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="F26"  (change)="checkCheckBoxValue($event)"  value="F26">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F27" (change)="checkCheckBoxValue($event)"  value="F27">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F28" (change)="checkCheckBoxValue($event)"  value="F28">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F29"  (change)="checkCheckBoxValue($event)"  value="F29">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="F30"  (change)="checkCheckBoxValue($event)"  value="F30">
+</td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>G</td>
+                        
+  <td>
+    <input type="checkbox" class="seats" id="G1"  (change)="checkCheckBoxValue($event)"  value="G1">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G2"  (change)="checkCheckBoxValue($event)"  value="G2">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G3" (change)="checkCheckBoxValue($event)"  value="G3">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G4"  (change)="checkCheckBoxValue($event)"  value="G4">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G5" (change)="checkCheckBoxValue($event)"  value="G5">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="G6"  (change)="checkCheckBoxValue($event)"  value="G6">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G7"  (change)="checkCheckBoxValue($event)"  value="G7">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G8" (change)="checkCheckBoxValue($event)"  value="G8">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G9" (change)="checkCheckBoxValue($event)"  value="G9">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G10"  (change)="checkCheckBoxValue($event)"  value="G10">
+</td>
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="G11"  (change)="checkCheckBoxValue($event)"  value="G11">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G12"  (change)="checkCheckBoxValue($event)"  value="G12">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G13" (change)="checkCheckBoxValue($event)"  value="G13">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G14"  (change)="checkCheckBoxValue($event)"  value="G14">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G15"  (change)="checkCheckBoxValue($event)"  value="G15">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="G16"  (change)="checkCheckBoxValue($event)"  value="G16">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G17"  (change)="checkCheckBoxValue($event)"  value="G17">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G18"  (change)="checkCheckBoxValue($event)"  value="G18">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G19"  (change)="checkCheckBoxValue($event)"  value="G19">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G20"  (change)="checkCheckBoxValue($event)"  value="G20">
+</td>
+
+
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="G21"  (change)="checkCheckBoxValue($event)"  value="G21">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G22"  (change)="checkCheckBoxValue($event)"  value="G22">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G23" (change)="checkCheckBoxValue($event)"  value="G23">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G24"  (change)="checkCheckBoxValue($event)"  value="G24">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G25"  (change)="checkCheckBoxValue($event)"  value="G25">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="G26"  (change)="checkCheckBoxValue($event)"  value="G26">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G27" (change)="checkCheckBoxValue($event)"  value="G27">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G28" (change)="checkCheckBoxValue($event)"  value="G28">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G29"  (change)="checkCheckBoxValue($event)"  value="G29">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="G30"  (change)="checkCheckBoxValue($event)"  value="G30">
+</td>
+
+
+                    </tr>
+                 <tr>
+                     <td>H</td>
+                     
+  <td>
+    <input type="checkbox" class="seats" id="H1"  (change)="checkCheckBoxValue($event)"  value="H1">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H2"  (change)="checkCheckBoxValue($event)"  value="H2">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H3" (change)="checkCheckBoxValue($event)"  value="H3">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H4"  (change)="checkCheckBoxValue($event)"  value="H4">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H5" (change)="checkCheckBoxValue($event)"  value="H5">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="H6"  (change)="checkCheckBoxValue($event)"  value="H6">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H7"  (change)="checkCheckBoxValue($event)"  value="H7">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H8" (change)="checkCheckBoxValue($event)"  value="H8">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H9" (change)="checkCheckBoxValue($event)"  value="H9">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H10"  (change)="checkCheckBoxValue($event)"  value="H10">
+</td>
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="H11"  (change)="checkCheckBoxValue($event)"  value="H11">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H12"  (change)="checkCheckBoxValue($event)"  value="H12">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H13" (change)="checkCheckBoxValue($event)"  value="H13">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H14"  (change)="checkCheckBoxValue($event)"  value="H14">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H15"  (change)="checkCheckBoxValue($event)"  value="H15">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="H16"  (change)="checkCheckBoxValue($event)"  value="H16">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H17"  (change)="checkCheckBoxValue($event)"  value="H17">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H18"  (change)="checkCheckBoxValue($event)"  value="H18">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H19"  (change)="checkCheckBoxValue($event)"  value="H19">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H20"  (change)="checkCheckBoxValue($event)"  value="H20">
+</td>
+
+
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="H21"  (change)="checkCheckBoxValue($event)"  value="H21">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H22"  (change)="checkCheckBoxValue($event)"  value="H22">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H23" (change)="checkCheckBoxValue($event)"  value="H23">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H24"  (change)="checkCheckBoxValue($event)"  value="H24">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H25"  (change)="checkCheckBoxValue($event)"  value="H25">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="H26"  (change)="checkCheckBoxValue($event)"  value="H26">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H27" (change)="checkCheckBoxValue($event)"  value="H27">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H28" (change)="checkCheckBoxValue($event)"  value="H28">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H29"  (change)="checkCheckBoxValue($event)"  value="H29">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="H30"  (change)="checkCheckBoxValue($event)"  value="H30">
+</td>
+
+
+                 </tr>
+                 <tr>
+                     <td>I</td>
+                     
+  <td>
+    <input type="checkbox" class="seats" id="I1"  (change)="checkCheckBoxValue($event)"  value="I1">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I2"  (change)="checkCheckBoxValue($event)"  value="I2">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I3" (change)="checkCheckBoxValue($event)"  value="I3">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I4"  (change)="checkCheckBoxValue($event)"  value="I4">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I5" (change)="checkCheckBoxValue($event)"  value="I5">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="I6"  (change)="checkCheckBoxValue($event)"  value="I6">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I7"  (change)="checkCheckBoxValue($event)"  value="I7">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I8" (change)="checkCheckBoxValue($event)"  value="I8">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I9" (change)="checkCheckBoxValue($event)"  value="I9">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I10"  (change)="checkCheckBoxValue($event)"  value="I10">
+</td>
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="I11"  (change)="checkCheckBoxValue($event)"  value="I11">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I12"  (change)="checkCheckBoxValue($event)"  value="I12">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I13" (change)="checkCheckBoxValue($event)"  value="I13">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I14"  (change)="checkCheckBoxValue($event)"  value="I14">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I15"  (change)="checkCheckBoxValue($event)"  value="I15">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="I16"  (change)="checkCheckBoxValue($event)"  value="I16">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I17"  (change)="checkCheckBoxValue($event)"  value="I17">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I18"  (change)="checkCheckBoxValue($event)"  value="I18">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I19"  (change)="checkCheckBoxValue($event)"  value="I19">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I20"  (change)="checkCheckBoxValue($event)"  value="I20">
+</td>
+
+
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="I21"  (change)="checkCheckBoxValue($event)"  value="I21">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I22"  (change)="checkCheckBoxValue($event)"  value="I22">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I23" (change)="checkCheckBoxValue($event)"  value="I23">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I24"  (change)="checkCheckBoxValue($event)"  value="I24">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I25"  (change)="checkCheckBoxValue($event)"  value="I25">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="I26"  (change)="checkCheckBoxValue($event)"  value="I26">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I27" (change)="checkCheckBoxValue($event)"  value="I27">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I28" (change)="checkCheckBoxValue($event)"  value="I28">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I29"  (change)="checkCheckBoxValue($event)"  value="I29">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="I30"  (change)="checkCheckBoxValue($event)"  value="I30">
+</td>
+
+
+                 </tr>
+                 <tr>
+                     <td>J</td>
+                     
+  <td>
+    <input type="checkbox" class="seats" id="J1"  (change)="checkCheckBoxValue($event)"  value="J1">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J2"  (change)="checkCheckBoxValue($event)"  value="J2">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J3" (change)="checkCheckBoxValue($event)"  value="J3">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J4"  (change)="checkCheckBoxValue($event)"  value="J4">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J5" (change)="checkCheckBoxValue($event)"  value="J5">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="J6"  (change)="checkCheckBoxValue($event)"  value="J6">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J7"  (change)="checkCheckBoxValue($event)"  value="J7">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J8" (change)="checkCheckBoxValue($event)"  value="J8">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J9" (change)="checkCheckBoxValue($event)"  value="J9">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J10"  (change)="checkCheckBoxValue($event)"  value="J10">
+</td>
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="J11"  (change)="checkCheckBoxValue($event)"  value="J11">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J12"  (change)="checkCheckBoxValue($event)"  value="J12">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J13" (change)="checkCheckBoxValue($event)"  value="J13">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J14"  (change)="checkCheckBoxValue($event)"  value="J14">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J15"  (change)="checkCheckBoxValue($event)"  value="J15">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="J16"  (change)="checkCheckBoxValue($event)"  value="J16">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J17"  (change)="checkCheckBoxValue($event)"  value="J17">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J18"  (change)="checkCheckBoxValue($event)"  value="J18">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J19"  (change)="checkCheckBoxValue($event)"  value="J19">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J20"  (change)="checkCheckBoxValue($event)"  value="J20">
+</td>
+
+
+<td class="seatGap"></td>
+<td class="seatGap"></td>
+<td>
+    <input type="checkbox" class="seats" id="J21"  (change)="checkCheckBoxValue($event)"  value="J21">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J22"  (change)="checkCheckBoxValue($event)"  value="J22">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J23" (change)="checkCheckBoxValue($event)"  value="J23">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J24"  (change)="checkCheckBoxValue($event)"  value="J24">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J25"  (change)="checkCheckBoxValue($event)"  value="J25">
+</td>
+
+<td>
+    <input type="checkbox" class="seats" id="J26"  (change)="checkCheckBoxValue($event)"  value="J26">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J27" (change)="checkCheckBoxValue($event)"  value="J27">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J28" (change)="checkCheckBoxValue($event)"  value="J28">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J29"  (change)="checkCheckBoxValue($event)"  value="J29">
+</td>
+<td>
+    <input type="checkbox" class="seats" id="J30"  (change)="checkCheckBoxValue($event)"  value="J30">
+</td>
+
+
+                 </tr>
+
+                </table>
+
+                <div class="screen">
+                    <h2 class="wthree">Screen this way</h2>
+                </div>
+                <button type="submit" (click)="addseats()">Confirm Seat</button>
+                <br><br><br>
+            </div></form>
+          
+            <div class="displayerBoxes txt-center">
+                <table class="Displaytable w3ls-table" width="100%">
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Seats</th>
+                        <th>Seats</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea id="nameDisplay" >{{Name}}</textarea>
+                        </td>
+                        <td>
+                            <textarea id="NumberDisplay">{{Rgno}}</textarea>
+                        </td>
+                        <td>
+                            <textarea id="seatsDisplay"  >{{seats.toString()}}</textarea>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <button class="print" type="submit" (click)="print()">Print Seats</button>
+            </div>
+        </div>
+      
+    </div>
+    <br><br>
+</div>

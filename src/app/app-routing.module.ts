@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { TicketComponent } from './ticket/ticket.component';
 import  {AdminComponent} from './admin/admin.component';
+import { DisplayComponent } from './display/display.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'awards',component: AwardsComponent},
   {path:'contact',component: ContactusComponent},
   {path:'ticket',component: TicketComponent},
+  {path:'display',component:DisplayComponent},
   {path:'admin',component: AdminComponent},
   // {path:'signup',component: SignupComponent},
   // {path:'summary',component: SummaryComponent},

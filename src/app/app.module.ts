@@ -21,6 +21,7 @@ import { TicketComponent } from './ticket/ticket.component';
 import swal from 'sweetalert';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AdminComponent } from './admin/admin.component';
     NavbarComponent,
     FooterComponent,
     TicketComponent,
-    AdminComponent
+    AdminComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
