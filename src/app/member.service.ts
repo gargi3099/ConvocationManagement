@@ -17,6 +17,7 @@ export class MemberService {
   object:Details={name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
   sdata=[]
   result=[]
+  result1 :any;
   eligible=[]
   seats=[]
   eligibility=false;
@@ -172,6 +173,25 @@ export class MemberService {
     
   }
 
+  getMemberById(id){
+    return this.db.collection("registration").doc(id).valueChanges()
+  }
+
+
+  getAppMembers(branch){
+    this.db.collection("eligibilityCriteria",ref=>ref.where('Branch','==',branch))
+     .snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as any;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+    ).subscribe(res=>{
+      this.result1=res;
+      console.log(res)
+    })
+    
+  }
 getstudents(){
   this.db.collection("StudentData")
   .snapshotChanges()

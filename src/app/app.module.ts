@@ -17,6 +17,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import 'firebase/firestore';
 import { auth } from 'firebase/app';
 import { FooterComponent } from './footer/footer.component';
+import { GraduatesComponent } from './graduates/graduates.component';
 import { TicketComponent } from './ticket/ticket.component';
 import swal from 'sweetalert';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -33,6 +34,7 @@ import { DisplayComponent } from './display/display.component';
     ContactusComponent,
     NavbarComponent,
     FooterComponent,
+    GraduatesComponent,
     TicketComponent,
     AdminComponent,
     DisplayComponent
