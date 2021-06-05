@@ -11,13 +11,13 @@
                 <input  class="form-control" name="nameS" #nameS="ngModel" type="string" required ngModel><br>
                 <label class="required">Branch</label>
                 <select class="form-control" name="branchS" #branchS="ngModel" ngModel>
-                  <option value="ComputerScienceEngineering">Computer Science Engineering</option>
-                  <option value="ElectronicsCommunication Engineering">Electronics & Communication Engineering</option>
-                  <option value="ElectricalEngineering">Electrical Engineering</option>
-                  <option value="AgriculturalEngineering">Agricultural Engineering</option>
-                  <option value="MechanicalEngineering">Mechanical Engineering</option>
-                  <option value="MiningEngineering">Mining Engineering</option>
-                  <option value="CivilEngineering">Civil Engineering</option>
+                  <option value="Computer Science Engineering">Computer Science Engineering</option>
+                  <option value="Electronics Engineering">Electronics & Communication Engineering</option>
+                  <option value="Electrical Engineering">Electrical Engineering</option>
+                  <option value="Agriculture Engineering">Agricultural Engineering</option>
+                  <option value="Mechanical Engineering">Mechanical Engineering</option>
+                  <option value="Mining Engineering">Mining Engineering</option>
+                  <option value="Civil Engineering">Civil Engineering</option>
                 </select>
                 <button [disabled]="!searchObject.valid" class="btn btn-dark btn-block" type="submit">Submit</button>
               </form>

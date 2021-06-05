@@ -20,7 +20,7 @@ export class MemberService {
   result1 :any;
   eligible=[]
   seats=[]
-  eligibility=false;
+  eligibility="";
   available = false;
   guestno;
   seat=[]
@@ -102,7 +102,7 @@ export class MemberService {
 
   getEligibility(member){
     let promise = new Promise((resolve, reject) => {
-    this.db.collection("eligible",ref=>ref.where('branch','==',member.branchS).where('name','==',member.nameS))
+    this.db.collection("eligibilityCriteria",ref=>ref.where('Branch','==',member.branchS).where('Name','==',member.nameS))
     .snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as any;
@@ -118,7 +118,7 @@ export class MemberService {
       }
       else{
         this.eligibility=this.eligible[0].eligibility
-        if(this.eligibility)
+        if(this.eligibility == "Eligible")
         {
             this.available=true;
             swal({
@@ -251,10 +251,8 @@ getschedule(){
     this.db.collection("eligibilityCriteria").add(tempStudent) 
     swal({
       title: "Student Registered Successfully",
-      // text: "Hospital registered successfully",
       icon: "success",
     });
-    //alert("Student Successfully Added.")
   }
   addStudentdata(member)
   {
