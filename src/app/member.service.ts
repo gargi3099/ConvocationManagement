@@ -179,7 +179,7 @@ export class MemberService {
 
 
   getAppMembers(branch){
-    this.db.collection("eligibilityCriteria",ref=>ref.where('Branch','==',branch))
+    this.db.collection("eligibilityCriteria",ref=>ref.where('Branch','==',branch).where('eligibility','==',"Eligible"))
      .snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as any;
