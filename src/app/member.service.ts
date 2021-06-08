@@ -139,40 +139,40 @@ export class MemberService {
   return promise;
   }
 
-  getSeat(){
-    let c;
-    this.db.collection("seats",ref=>ref.orderBy('seatno','asc'))
-    .snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as any;
-        const id = a.payload.doc.id;
-        return { id, ...data };
-      }))
-    ).subscribe(res=>{
-      this.seats=res
-      for(c=0;c<=this.guestno;c++)
-      {
-        this.seat[c]=this.seats[c].seatno;
-        //console.log(this.seats[c])
-        //this.deleteData(this.seats[c].id);
+  // getSeat(){
+  //   let c;
+  //   this.db.collection("seats",ref=>ref.orderBy('seatno','asc'))
+  //   .snapshotChanges().pipe(
+  //     map(actions => actions.map(a => {
+  //       const data = a.payload.doc.data() as any;
+  //       const id = a.payload.doc.id;
+  //       return { id, ...data };
+  //     }))
+  //   ).subscribe(res=>{
+  //     this.seats=res
+  //     for(c=0;c<=this.guestno;c++)
+  //     {
+  //       this.seat[c]=this.seats[c].seatno;
+  //       //console.log(this.seats[c])
+  //       //this.deleteData(this.seats[c].id);
 
-      }
-      //console.log(this.seat)
-      this.available=false;
-      swal({
-        title: "Registered Successfully!",
-        text: "You are now welcome to the convocation!\n Your seat numbers are :- " + this.seat,
-        icon: "success",
-      });
-      for(c=0;c<=this.guestno;c++)
-      {
-        console.log(this.seats[c])
-        this.deleteData(this.seats[c].id);
+  //     }
+  //     //console.log(this.seat)
+  //     this.available=false;
+  //     swal({
+  //       title: "Registered Successfully!",
+  //       text: "You are now welcome to the convocation!\n Your seat numbers are :- " + this.seat,
+  //       icon: "success",
+  //     });
+  //     for(c=0;c<=this.guestno;c++)
+  //     {
+  //       console.log(this.seats[c])
+  //       this.deleteData(this.seats[c].id);
 
-      }
-    })
+  //     }
+  //   })
     
-  }
+  // }
 
   getMemberById(id){
     return this.db.collection("registration").doc(id).valueChanges()
@@ -259,11 +259,11 @@ getschedule(){
 
   addStudent(member)
   {
-    let tempStudent:{Name:string,Branch:string,eligibility:string,RollNo:string,YearOfGrad:string}=member
+    let tempStudent:{Name:string,Branch:string,eligibility:string,EnrollmentNo:string,YearOfGrad:string}=member
     tempStudent.Name=member.Name
     tempStudent.Branch=member.Branch
     tempStudent.eligibility=member.eligibility
-    tempStudent.RollNo=member.RollNo
+    tempStudent.EnrollmentNo=member.EnrollmentNo
     tempStudent.YearOfGrad=member.YearOfGrad
     this.db.collection("eligibilityCriteria").add(tempStudent) 
     swal({
@@ -273,11 +273,11 @@ getschedule(){
   }
   addStudentdata(member)
   {
-    let tempStudent:{Name:string,Branch:string,eligibility:string,RollNo:string,YearOfGrad:string}=member
+    let tempStudent:{Name:string,Branch:string,eligibility:string,EnrollmentNo:string,YearOfGrad:string}=member
     tempStudent.Name=member.Name
     tempStudent.Branch=member.Branch
     tempStudent.eligibility=member.eligibility
-    tempStudent.RollNo=member.RollNo
+    tempStudent.EnrollmentNo=member.EnrollmentNo
     tempStudent.YearOfGrad=member.YearOfGrad
     this.db.collection("StudentData").add(tempStudent) 
     //alert("Student Successfully Added.")
