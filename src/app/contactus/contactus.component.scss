@@ -111,7 +111,14 @@ body{
   opacity: 0.5;
   text-decoration: none;
   }
-  
+  a{
+    color: white;
+    opacity: 0.7;
+    
+  }
+  a:hover{
+    opacity: 1;
+  }
   section .container .contactinfo .sci li:hover  img{
     
     opacity: 1;

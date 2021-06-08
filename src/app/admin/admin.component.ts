@@ -4,6 +4,7 @@ import {Location} from '@angular/common';
 import { NgForm } from '@angular/forms';
 import { MemberService } from '../member.service';
 import swal from 'SweetAlert';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -11,7 +12,7 @@ import swal from 'SweetAlert';
 })
 export class AdminComponent implements OnInit {
 i:number=0
-  constructor(private auth:AuthService, private lock:Location, private memberService:MemberService) { 
+  constructor(private auth:AuthService, private lock:Location, private memberService:MemberService,public router:Router) { 
     memberService.getstudents()
   }
 
@@ -21,7 +22,9 @@ i:number=0
     this.auth.logout();
     this.lock.back();  
   }
-
+branches(){
+  this.router.navigateByUrl('/branches')
+}
   submitstudent(formData:NgForm){
     console.log(formData)
     this.memberService.addStudent(formData.value)

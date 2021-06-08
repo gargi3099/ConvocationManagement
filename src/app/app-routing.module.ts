@@ -9,6 +9,8 @@ import { GraduatesComponent } from './graduates/graduates.component';
 import { TicketComponent } from './ticket/ticket.component';
 import  {AdminComponent} from './admin/admin.component';
 import { DisplayComponent } from './display/display.component';
+import { BranchesComponent } from './branches/branches.component';
+import { PreviousstudentsComponent } from './previousstudents/previousstudents.component';
 
 
 const routes: Routes = [
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path:'ticket',component: TicketComponent},
   {path:'display',component:DisplayComponent},
   {path:'admin',component: AdminComponent},
+  {path:'branches',component: BranchesComponent},
+  {path:'students/:a',component: PreviousstudentsComponent},
   // {path:'signup',component: SignupComponent},
   // {path:'summary',component: SummaryComponent},
   // {path:'**',component: SigninComponent}

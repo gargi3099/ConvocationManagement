@@ -1,0 +1,59 @@
+<body>      
+    <div class="center">
+        <form (ngSubmit)="searchStudent(details)" #details="ngForm">
+            <div class="row mx-auto">
+            
+                <div  class="form-row">
+                    <div class="form-group text-center text-secondary">
+                    <label  style="color: black; margin-left: 390px; font-family: 'Times New Roman', Times, serif; font-size: 20px;">Year Of Graduation</label>
+                    
+                    <input required #year="ngModel" ngModel type="number" id="year" name="year">
+                
+                    </div>
+                
+                <br>
+            
+                <button type="submit" class="buttonk">Search</button>
+            
+            <br>
+            <br>
+    
+             </div>
+             <div class="col-lg-3"></div>
+           </div>
+        
+        </form>
+    </div>
+    
+    <div *ngIf="isclicked">
+        
+    
+    
+            <table class="center">
+                
+                <tr>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>Enrollment No.</th>
+                <th>Eligibility</th>
+                </tr>
+            
+            
+                <tr *ngFor="let item of memberService.resu">
+                <td class="stage-saturn">{{item.Name}}</td>
+                <td class="stage-earth">{{item.Branch}}</td>
+                <td class="stage-earth">{{item.RollNo}}</td>
+                <td class="stage-saturn">{{item.eligibility}}</td>
+                </tr>
+            
+              </table>
+              
+        
+    
+    
+    
+        
+        </div>
+        
+    
+    </body>

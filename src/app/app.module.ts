@@ -23,6 +23,8 @@ import swal from 'sweetalert';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { DisplayComponent } from './display/display.component';
+import { BranchesComponent } from './branches/branches.component';
+import { PreviousstudentsComponent } from './previousstudents/previousstudents.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { DisplayComponent } from './display/display.component';
     GraduatesComponent,
     TicketComponent,
     AdminComponent,
-    DisplayComponent
+    DisplayComponent,
+    BranchesComponent,
+    PreviousstudentsComponent
   ],
   imports: [
     BrowserModule,

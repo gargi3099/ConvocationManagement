@@ -155,7 +155,8 @@ text-align: center;}
     {
         width: 25%;
         height: 345px;
-        background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
+        background: linear-gradient(147deg, #000000 0%, #2c3e50 74%);;
+       // background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
         // background-color: #1fd1f9;
         // background-color: #60dfcd;
         // background-color: #f89b9e;
@@ -192,12 +193,13 @@ text-align: center;}
      { width: 1310px;
          border-style: groove;
        margin-top: 50px; 
-       //margin-left: 50px; 
+       margin-left: 20px; 
     //    margin-bottom: 10px;
      padding-bottom: 20px;
      }
 .invite{
-    background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
+  background:linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+   // background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
     width: 1310px;
     height: 350px;
     margin: auto;

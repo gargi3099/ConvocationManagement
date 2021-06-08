@@ -25,6 +25,7 @@ export class MemberService {
   guestno;
   seat=[]
   students=[]
+  resu=[]
   rname;
   rbranch;
   reid;
@@ -192,6 +193,22 @@ export class MemberService {
     })
     
   }
+
+  getPreviousStudents(branch,year){
+    this.db.collection("StudentData",ref=>ref.where('Branch','==',branch).where('YearOfGrad','==',year))
+     .snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as any;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+    ).subscribe(res=>{
+      this.resu=res;
+      console.log(this.resu)
+    })
+    
+  }
+
 getstudents(){
   this.db.collection("StudentData")
   .snapshotChanges()

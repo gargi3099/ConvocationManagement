@@ -14,15 +14,15 @@
 
       <div class="user-box">
         <input type="text" name="RollNo" #RollNo="ngModel" required autocomplete="off" ngModel>
-        <label>Student Roll No.</label>
+        <label>Student Enrollment No.</label>
       </div>
      
       <div class="user-box">      
-        <input type="text" list="branch" name="Branch" #Branch="ngModel" required ngModel>
+        <input autocomplete="off" type="text" list="branch" name="Branch" #Branch="ngModel" required ngModel>
 <datalist id="branch">
   <option value="Computer Science Engineering">
   <option value="Civil Engineering">
-  <option value="Electronics Engineering">
+  <option value="Electronics & Communication Engineering">
   <option value="Electrical Engineering">
   <option value="Mechanical Engineering">
   <option value="Agriculture Engineering">
@@ -32,7 +32,7 @@
       </div>
 
       <div class="user-box">
-        <input type="text" list="eligible" name="eligibility" #eligibility="ngModel" required ngModel>
+        <input  autocomplete="off" type="text" list="eligible" name="eligibility" #eligibility="ngModel" required ngModel>
         <datalist id="eligible">
           <option value="Eligible">
           <option value="Not Eligible">
@@ -80,7 +80,7 @@
         <span></span>
         <span></span>
         <span></span>
-       <div (click)="logout()">Previous Year Students</div> 
+       <div (click)="branches()">Previous Year Students</div> 
       </button>
 
     </div> 
