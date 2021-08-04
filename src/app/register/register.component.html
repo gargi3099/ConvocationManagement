@@ -7,6 +7,8 @@
         </div>
           <main class="info">           
               <form (ngSubmit)="submitSearch(searchObject)" #searchObject="ngForm">
+                <label class="required">Enrollment No.</label>
+                <input  class="form-control" name="enrollS" #enrollS="ngModel" type="string" required ngModel><br>
                 <label class="required">Name</label>
                 <input  class="form-control" name="nameS" #nameS="ngModel" type="string" required ngModel><br>
                 <label class="required">Branch</label>
@@ -32,13 +34,12 @@
       </div >
         <main class="info">           
             <form (ngSubmit)="submitCall(memberObject)" #memberObject="ngForm">
-              <!-- <label class="required">Name</label> -->
-              <input style="width: 700px;" class="form-control" name="name" #name="ngModel" type="string" required placeholder="Name*" ngModel><br>
-              <!-- <label class="required">Mother's Name</label> -->
+              <input style="width: 700px; color:black;" class="form-control" name="enroll" type="string" value={{this.search.enrollS}} readonly="readonly"><br>
+              <input style="width: 700px; color:black;" class="form-control" name="name" type="string" value={{this.search.nameS}} readonly="readonly"><br>
               <input class="form-control" name="mname" #mname="ngModel" type="string" required placeholder="Mother's name*" ngModel><br>
-              <!-- <label class="required">Father's Name</label> -->
               <input class="form-control" name="fname" #fname="ngModel" type="string" required placeholder="Father's name*" ngModel><br>
-              <label class="required">Branch</label>
+              <input style="width: 700px; color:black;" class="form-control" name="branch" type="string" value={{this.search.branchS}} readonly="readonly"><br>
+              <!-- <label class="required">Branch</label>
               <select class="form-control" name="branch" #branch="ngModel" ngModel>
                 <option value="ComputerScienceEngineering">Computer Science Engineering</option>
                 <option value="ElectronicsCommunication Engineering">Electronics & Communication Engineering</option>
@@ -47,7 +48,7 @@
                 <option value="MechanicalEngineering">Mechanical Engineering</option>
                 <option value="MiningEngineering">Mining Engineering</option>
                 <option value="CivilEngineering">Civil Engineering</option>
-              </select>
+              </select> -->
               <!-- <label class="required">Email ID</label> -->
               <input class="form-control" name="email" #email="ngModel" type="email" required placeholder="Email id*" ngModel><br>
               <!-- <label class="required">Phone number</label> -->

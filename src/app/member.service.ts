@@ -14,7 +14,7 @@ import { variable } from '@angular/compiler/src/output/output_ast';
   providedIn: 'root',
 })
 export class MemberService {
-  object:Details={name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
+  object:Details={enroll:'',name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
   sdata=[]
   result=[]
   result1 :any;
@@ -41,7 +41,7 @@ export class MemberService {
    addData(member)
   {
     //let i=0,j=1,c=0
-    let tempMember:{name:string,mname:string,fname:string,branch:string,email:string,phone:number,address:string,guestno:number,guestnames:string}=member
+    let tempMember:{enroll:string,name:string,mname:string,fname:string,branch:string,email:string,phone:number,address:string,guestno:number,guestnames:string}=member
     tempMember.name=member.name
     tempMember.mname=member.mname
     tempMember.fname=member.fname
@@ -103,7 +103,7 @@ export class MemberService {
 
   getEligibility(member){
     let promise = new Promise((resolve, reject) => {
-    this.db.collection("eligibilityCriteria",ref=>ref.where('Branch','==',member.branchS).where('Name','==',member.nameS))
+    this.db.collection("eligibilityCriteria",ref=>ref.where('Branch','==',member.branchS).where('Name','==',member.nameS).where('EnrollmentNo','==',member.enrollS))
     .snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as any;

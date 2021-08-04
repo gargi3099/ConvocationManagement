@@ -12,10 +12,10 @@ import swal from 'sweetalert';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  object1:Details={name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
+  object1:Details={enroll:'',name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
   result1=[]
   isavailable=false;
-  search={branchS:'a',nameS:'a',eligibility:''}
+  search={enrollS:'',branchS:'',nameS:'',eligibility:''}
   constructor(public memberService:MemberService, public router:Router) {
     //memberService.getEligibility(this.search)
     memberService.getseats();
@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
 
   addMember(){
     this.memberService.addData(this.object1)
-    this.object1={name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
+    this.object1={enroll:'',name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
     this.router.navigateByUrl('/home')
   }
 /*
@@ -43,6 +43,7 @@ export class RegisterComponent implements OnInit {
 
   submitSearch(searchData:NgForm){
     //console.log(searchData.value)
+    this.search=searchData.value;
     this.memberService.getEligibility(searchData.value);
     searchData.resetForm();
     // this.router.navigateByUrl('/home')
@@ -50,7 +51,17 @@ export class RegisterComponent implements OnInit {
 
   submitCall(formData:NgForm){
     console.log(formData)
-    this.memberService.addData(formData.value)
+    this.object1.enroll=this.search.enrollS;
+    this.object1.name=this.search.nameS;
+    this.object1.mname=formData.value.mname;
+    this.object1.fname=formData.value.fname;
+    this.object1.branch=this.search.branchS;
+    this.object1.email=formData.value.email;
+    this.object1.phone=formData.value.phone;
+    this.object1.address=formData.value.address;
+    this.object1.guestno=formData.value.guestno;
+    this.object1.guestnames=formData.value.guestnames;
+    this.memberService.addData(this.object1)
     
     this.router.navigateByUrl('/ticket')
     formData.resetForm()
