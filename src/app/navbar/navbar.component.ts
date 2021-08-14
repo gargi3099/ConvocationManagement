@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
   {   
     this.showModal = true; // Show-Hide Modal Check
   }
-  //Bootstrap Modal Close event
+  
   hide()
   {
     this.showModal = false;

@@ -44,7 +44,7 @@ export class DisplayComponent implements OnInit {
 
 registernew(){
   this.member.available=false;
-  this.router.navigateByUrl('/register')
+  this.router.navigateByUrl('/home')
 }
 
 }

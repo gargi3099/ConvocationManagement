@@ -10,17 +10,17 @@ body{
     padding-bottom: 10px;
 }
   section{
-    //border-style: groove;
+    
     position: relative;
     display: flex;
     justify-content: center;
-   // margin-top: 10px;
+   
     align-items: center;
-    // min-height: 1050px;
+   
     height: auto;
-    // background-image: url(/assets/Banner2.jpeg);
+   
     background: white;
-    //background: linear-gradient(315deg, #96c8fb 0%, #ddbdfc 74%);
+   
   }
   section::before{
     content:'' ;
@@ -30,7 +30,7 @@ body{
     width: 50%;
     height: 100%;
     background:#fff;
-    //background: linear-gradient(315deg, #96c8fb 0%, #ddbdfc 74%);
+    
   }
   section .container{
     position: relative;
@@ -41,15 +41,15 @@ body{
   section .container .contactinfo{
     position:absolute;
     top: 40px;
-    // left: 0;
+    
     width: 380px;
     height: calc(100%-80px);
     background-image: url('/assets/images/abstract.jpg');
-    //background: linear-gradient(315deg, #96c8fb 0%, #ddbdfc 74%);
+    
     z-index: 1;
     padding: 40px;
     display: flex;
-    //border-style: groove;
+    
     flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 20px 20px rgba(0,0,0,0.2);  
@@ -219,10 +219,10 @@ body{
     background:#777; text-align: center; padding:5%;
     height: 10px;
     
-    //margin-bottom: 10px;
+   
 }
 .invite{
-    //background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
+  
     background-color: rgb(216, 216, 127);
     width: 100%;
     height: 180px;
@@ -237,7 +237,7 @@ body{
 .text{
     float: right;
     padding: 2px;
-    //border-style: groove;
+    
     width: 1190px;
     height: 100px;
     color: black;

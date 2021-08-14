@@ -47,10 +47,7 @@ isok:boolean=false;
       var a=document.getElementById(v);
       
       a.setAttribute("disabled", "disabled");
-     
-      // var a = document.getElementById(v);
-     // console.log(a);
-      // document.getElementById(v)
+    
       a.setAttribute("checked", "true");
      
     }
@@ -89,14 +86,7 @@ isok:boolean=false;
   
   }
   addseats(){
-//   if(this.onemore){
-// swal({
-//   text:"Select Right number of Seats",
-//   icon:"error",
-  
-// })
-//     }
-    // else{
+
      
     swal({
       text: "Your seats are booked!",
@@ -107,12 +97,11 @@ isok:boolean=false;
      console.log(this.seats);
 
      this.member.addSeats(this.Name,this.Branch,this.Email,this.seats)
-    // formData.resetForm()
+    
     for(this.i=0;this.i<this.seats.length;this.i++){
       this.member.seatData(this.seats[this.i]);
     }
   }
     
-    //}
 
 }

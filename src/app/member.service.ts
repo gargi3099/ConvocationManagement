@@ -78,8 +78,6 @@ export class MemberService {
 
     this.db.collection("Seats").add(tempSeat) 
     
-    
-    // alert("Distributor Successfully Added.")
   }
 
   seatData(k){
@@ -138,41 +136,6 @@ export class MemberService {
   });
   return promise;
   }
-
-  // getSeat(){
-  //   let c;
-  //   this.db.collection("seats",ref=>ref.orderBy('seatno','asc'))
-  //   .snapshotChanges().pipe(
-  //     map(actions => actions.map(a => {
-  //       const data = a.payload.doc.data() as any;
-  //       const id = a.payload.doc.id;
-  //       return { id, ...data };
-  //     }))
-  //   ).subscribe(res=>{
-  //     this.seats=res
-  //     for(c=0;c<=this.guestno;c++)
-  //     {
-  //       this.seat[c]=this.seats[c].seatno;
-  //       //console.log(this.seats[c])
-  //       //this.deleteData(this.seats[c].id);
-
-  //     }
-  //     //console.log(this.seat)
-  //     this.available=false;
-  //     swal({
-  //       title: "Registered Successfully!",
-  //       text: "You are now welcome to the convocation!\n Your seat numbers are :- " + this.seat,
-  //       icon: "success",
-  //     });
-  //     for(c=0;c<=this.guestno;c++)
-  //     {
-  //       console.log(this.seats[c])
-  //       this.deleteData(this.seats[c].id);
-
-  //     }
-  //   })
-    
-  // }
 
   getMemberById(id){
     return this.db.collection("registration").doc(id).valueChanges()
@@ -280,7 +243,7 @@ getschedule(){
     tempStudent.EnrollmentNo=member.EnrollmentNo
     tempStudent.YearOfGrad=member.YearOfGrad
     this.db.collection("StudentData").add(tempStudent) 
-    //alert("Student Successfully Added.")
+    
   }
   addContactForm(member)
   {
@@ -291,7 +254,7 @@ getschedule(){
     tempStudent.Email=member.Email
     tempStudent.Contact=member.Contact
     this.db.collection("ContactForm").add(tempStudent) 
-    // alert("Distributor Successfully Added.")
+    
   }
 
 

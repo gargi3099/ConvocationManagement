@@ -6,28 +6,27 @@ body{
 }
 .page{
     width: 100%;
-    // height: auto;
+    
     background-color:floralwhite;
-    //border-style: groove;
+   
     padding-bottom: 10px;
 }
 .headerpart{
     width: 100%;
     height: 140px;
-    //border-style: groove;
+    
     background-color: darkblue;
     background-image: url('/assets/logo-mpuat1.png');
     background-repeat: no-repeat;
 }
 .navbar {
     overflow: hidden;
-    //background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-    // background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
+    
     background-image: url('/assets/images/abstract.jpg');
     font-family:'Times New Roman', Times, serif;
   }
   
-  /* Links inside the navbar */
+  
   .navbar a {
     float: left;
     font-size: 16px;
@@ -37,7 +36,7 @@ body{
     text-decoration: none;
   }
   
-  /* The dropdown container */
+  
   .dropdown {
     float: left;
     overflow: hidden;
@@ -47,7 +46,7 @@ body{
     color: white;
     box-shadow: 2px 2px 10px black;
 }
-  /* Dropdown button */
+  
   .dropdown .dropbtn {
     font-size: 16px;
     border: none;
@@ -60,7 +59,7 @@ body{
   }
   
   
-  /* Add a red background color to navbar links on hover */
+  
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: rgb(245, 238, 238);
     color: black;
@@ -68,7 +67,7 @@ body{
   }
   
   
-  /* Dropdown content (hidden by default) */
+  
   .dropdown-content {
     display: none;
     position: absolute;
@@ -80,7 +79,7 @@ body{
   .dropbtn:hover{
     box-shadow:  2px 10px black;
   }
-  /* Links inside the dropdown */
+  
   .dropdown-content a {
     float: none;
     color: black;
@@ -90,13 +89,13 @@ body{
     text-align: left;
   }
   
-  /* Add a grey background color to dropdown links on hover */
+  
   .dropdown-content a:hover {
     background-color: #ddd;
    
   }
   
-  /* Show the dropdown menu on hover */
+  
   .dropdown:hover .dropdown-content {
     display: block;
   }
@@ -156,13 +155,7 @@ text-align: center;}
         width: 25%;
         height: 345px;
         background: linear-gradient(147deg, #000000 0%, #2c3e50 74%);;
-       // background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
-        // background-color: #1fd1f9;
-        // background-color: #60dfcd;
-        // background-color: #f89b9e;
-        // background-color: #0beef9;
-        // background-color: #96c8fb;
-        // background: linear-gradient(315deg, #96c8fb 0%, #ddbdfc 74%); 
+      
         border-radius: 5px;
         margin:5px;
         margin-left: 50px;
@@ -199,7 +192,7 @@ text-align: center;}
      }
 .invite{
   background:linear-gradient(147deg, #000000 0%, #2c3e50 74%);
-   // background-image: linear-gradient(to right, #00008b, #291b9b, #4130ac, #5645bd, #6a5acd);
+  
     width: 1310px;
     height: 350px;
     margin: auto;
@@ -234,5 +227,5 @@ h5:hover{
 .cp-text{ color: rgba(0,0,0,.7); text-shadow: 0 1px rgba(255, 255, 255, 0.1);
     background:#777; text-align: center; padding:5%;
     height: 10px;
-    //margin-bottom: 10px;
+   
 }

@@ -29,18 +29,6 @@ export class RegisterComponent implements OnInit {
     this.object1={enroll:'',name:'',mname:'',fname:'',branch:'',email:'',phone:0,address:'',guestno:0,guestnames:''}
     this.router.navigateByUrl('/home')
   }
-/*
-  addName(){
-    let object={name: this.enteredName, mail: this.email, password: this.pswd, pno: this.phone}
-     this.result.push(object) 
-     this.enteredName=""
-     this.email=""
-     this.pswd=""
-     this.phone=""
-     console.log(this.result)
-    
-  }*/
-
   submitSearch(searchData:NgForm){
     //console.log(searchData.value)
     this.search=searchData.value;
@@ -65,6 +53,6 @@ export class RegisterComponent implements OnInit {
     
     this.router.navigateByUrl('/ticket')
     formData.resetForm()
-    //
+    
   }
 }

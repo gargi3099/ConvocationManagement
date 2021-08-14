@@ -26,10 +26,7 @@ const routes: Routes = [
   {path:'admin',component: AdminComponent},
   {path:'branches',component: BranchesComponent},
   {path:'students/:a',component: PreviousstudentsComponent},
-  // {path:'signup',component: SignupComponent},
-  // {path:'summary',component: SummaryComponent},
-  // {path:'**',component: SigninComponent}
-
+  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
